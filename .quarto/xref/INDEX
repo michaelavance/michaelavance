@@ -4,5 +4,11 @@
   },
   "index.qmd": {
     "index.html": "4584f265"
+  },
+  "project.qmd": {
+    "project.html": "e65a4009"
+  },
+  "projects/Differential_Gene_Expression_Visualization.qmd": {
+    "Differential_Gene_Expression_Visualization.html": "c9cccbf4"
   }
 }
