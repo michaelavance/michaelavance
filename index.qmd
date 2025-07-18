@@ -1,7 +1,21 @@
 ---
-title: "Michaela_L_Vance"
+title: "Michaela L. Vance"
+toc: false
+about:
+  template: trestles
+  links:
+    - text: GitHub
+      href: link
+    - text: Email
+      href: link
 ---
 
-This is a Quarto website.
+::: {.column-page}
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Biography
+
+## Research Goals
+
+## Experience
+
+:::
