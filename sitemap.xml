@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://michaelavance.github.io/michaelavance/index.html</loc>
-    <lastmod>2025-07-18T16:32:46.997Z</lastmod>
+    <loc>https://michaelavance.github.io/michaelavance/project.html</loc>
+    <lastmod>2025-07-18T16:43:49.318Z</lastmod>
   </url>
   <url>
-    <loc>https://michaelavance.github.io/michaelavance/about.html</loc>
-    <lastmod>2025-07-18T16:32:46.997Z</lastmod>
+    <loc>https://michaelavance.github.io/michaelavance/index.html</loc>
+    <lastmod>2025-07-18T16:43:49.318Z</lastmod>
+  </url>
+  <url>
+    <loc>https://michaelavance.github.io/michaelavance/projects/Differential_Gene_Expression_Visualization.html</loc>
+    <lastmod>2025-07-18T16:43:49.318Z</lastmod>
   </url>
 </urlset>

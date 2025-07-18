@@ -1,8 +1,15 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "project.html",
+    "href": "project.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Title\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nDifferential Gene Expression Visualization\n\n\n \n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/Differential_Gene_Expression_Visualization.html",
+    "href": "projects/Differential_Gene_Expression_Visualization.html",
+    "title": "Differential Gene Expression Visualization",
     "section": "",
     "text": "About this site"
   }
