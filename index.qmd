@@ -6,9 +6,11 @@ about:
   template: trestles
   links:
     - text: GitHub
+      href: "https://github.com/michaelavance/michaelavance"
+    - text: LinkedIn
       href: link
     - text: Email
-      href: link
+      href: "mailto:michaela-vance@ouhsc.edu"
 ---
 
 ::: {.column-page}
