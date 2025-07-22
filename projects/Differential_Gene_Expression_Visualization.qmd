@@ -36,6 +36,7 @@ library(DESeq2)
 library(AnnotationDbi)
 library(AnnotationHub)
 library(ggrepel)
+library(dbplyr)
 ```
 
 ## Data Analysis

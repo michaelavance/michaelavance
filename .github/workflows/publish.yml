@@ -35,6 +35,7 @@ jobs:
             any::AnnotationDbi
             any::AnnotationHub
             any::ggrepel
+            any::dbplyr
             
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
