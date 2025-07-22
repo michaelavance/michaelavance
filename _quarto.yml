@@ -2,21 +2,27 @@ project:
   type: website
 
 website:
-  title: "Michaela_L_Vance"
+  title: "Michaela L. Vance"
   navbar:
-    left:
-      - href: index.qmd
+    right:
+      - icon: house-door-fill
+        href: index.qmd
         text: Home
-      - href: projects.qmd
+      - icon: file-bar-graph
+        href: projects.qmd
         text: Projects
+      - icon: journal-bookmark-fill
+        href: Publications.qmd
+        text: Publications
+      - icon: file-earmark-person
+        href: CV.qmd
+        text: CV
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
+    theme: styles.scss
+    #css: styles.css
     toc: true
-
+    mainfont: Lexend
 
 

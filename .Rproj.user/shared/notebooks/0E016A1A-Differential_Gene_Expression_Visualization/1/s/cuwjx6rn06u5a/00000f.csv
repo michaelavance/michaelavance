@@ -1,0 +1,8 @@
+"0","#| code-fold: show"
+"0","#| message: false"
+"0","#| warning: false"
+"0","#| label: Save Volcano Plots"
+"0","#save"
+"0","ggsave(""plots/volcanoplotPDGF.png"", vp2)"
+"0","ggsave(""plots/volcanoplotPDGFphenoswitchgenes.png"", vp2_labeled)"
+"0","ggsave(""plots/volcanoplotPDGFtop10.png"", vp2_top10)"

@@ -1,0 +1,66 @@
+"0","#| code-fold: show"
+"0","#| message: false"
+"0","#| warning: false"
+"0","#| label: Extract Differentially Expressed Genes (PDGF v. Control)"
+"0","#summary of DEGs"
+"0","summary(results(dds, contrast=c(""condition"",""PDGF"",""LH""), alpha=0.05))"
+"1","
+"
+"1","out of 21216 with nonzero total read count
+"
+"1","adjusted p-value < 0.05
+"
+"1","LFC > 0 (up)       : 2566, 12%
+"
+"1","LFC < 0 (down)     : 2614, 12%
+"
+"1","outliers [1]       : 0, 0%
+"
+"1","low counts [2]     : 5223, 25%
+"
+"1","(mean count < 2)
+"
+"1","[1] see 'cooksCutoff' argument of ?results
+"
+"1","[2] see 'independentFiltering' argument of ?results
+"
+"1","
+"
+"0","#save DEGs"
+"0","#extract results for IGF vs LH as a regular data.frame"
+"0","resPDGF <- results(dds, contrast = c(""condition"",""PDGF"",""LH""))"
+"0","resPDGFDF <- as.data.frame(resPDGF)"
+"0",""
+"0","#add gene_id from the row names"
+"0","resPDGFDF$rat_gene_id <- rownames(resPDGFDF)"
+"0",""
+"0","#add the symbol column from rowData(dds)"
+"0","resPDGFDF$rat_gene_symbol <- mcols(dds)$rat_gene_symbol"
+"0",""
+"0","#reorder to: symbol, gene_id, baseMean, log2FC, lfcSE, stat, pvalue, padj"
+"0","resPDGFDF <- resPDGFDF[, c(""rat_gene_id"",""rat_gene_symbol"",""baseMean"",""log2FoldChange"",""lfcSE"",""stat"",""pvalue"",""padj"")]"
+"0",""
+"0","#clear rownames"
+"0","rownames(resPDGFDF) <- NULL"
+"0",""
+"0","#view"
+"0","glimpse(resPDGFDF)"
+"1","Rows: 30,562"
+"1",""
+"1","
+"
+"1","Columns: 8"
+"1",""
+"1","
+"
+"1","$ rat_gene_id     [3m[38;5;246m<chr>[39m[23m ""ENSRNOG00000066169""[38;5;246m, [39m""ENSRNOG00000070168""[38;5;246m, [39m""ENSRNOG00000070901""[38;5;246m, [39m""ENSRNOG000000…
+$ rat_gene_symbol [3m[38;5;246m<chr>[39m[23m [31mNA[39m[38;5;246m, [39m""Or51f23c-ps1""[38;5;246m, [39m""Irgq""[38;5;246m, [39m""Doc2g""[38;5;246m, [39m""Ceacam16""[38;5;246m, [39m""LOC120100214""[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m""LOC1201002…
+$ baseMean        [3m[38;5;246m<dbl>[39m[23m 0.4219285[38;5;246m, [39m0.0000000[38;5;246m, [39m754.6358198[38;5;246m, [39m5.9886733[38;5;246m, [39m0.0000000[38;5;246m, [39m0.0000000[38;5;246m, [39m108.9185526[38;5;246m,[39m…
+$ log2FoldChange  [3m[38;5;246m<dbl>[39m[23m -0.712655529[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m-0.002314038[38;5;246m, [39m0.689019503[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m-0.656867824[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m0.511…
+$ lfcSE           [3m[38;5;246m<dbl>[39m[23m 2.6903036[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m0.1363147[38;5;246m, [39m0.8689066[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m0.2764881[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m0.9568976[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mN[39m…
+$ stat            [3m[38;5;246m<dbl>[39m[23m -0.26489781[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m-0.01697571[38;5;246m, [39m0.79297306[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m-2.37575469[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m0.5349004…
+$ pvalue          [3m[38;5;246m<dbl>[39m[23m 7.910882e-01[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m9.864560e-01[38;5;246m, [39m4.277935e-01[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m1.751310e-02[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m5.92…
+$ padj            [3m[38;5;246m<dbl>[39m[23m [31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m9.925101e-01[38;5;246m, [39m6.015807e-01[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m5.435626e-02[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m7.387401e-01[38;5;246m, [39m…"
+"1",""
+"1","
+"

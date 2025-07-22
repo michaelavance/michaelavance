@@ -10,5 +10,17 @@
   },
   "projects/Differential_Gene_Expression_Visualization.qmd": {
     "Differential_Gene_Expression_Visualization.html": "c9cccbf4"
+  },
+  "projects.qmd": {
+    "projects.html": "6e930f32"
+  },
+  "projects/Differential_Gene_Expression_Visualization.knit.md": {
+    "Differential_Gene_Expression_Visualization.knit.html": "caf40819"
+  },
+  "CV.qmd": {
+    "CV.html": "fb812c15"
+  },
+  "Publications.qmd": {
+    "Publications.html": "ffcf439f"
   }
 }

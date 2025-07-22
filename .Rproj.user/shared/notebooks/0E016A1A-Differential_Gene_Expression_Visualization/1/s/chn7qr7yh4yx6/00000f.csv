@@ -1,0 +1,6 @@
+"0","#| code-fold: show"
+"0","#| message: false"
+"0","#| warning: false"
+"0","#| label: Save PCA Plot"
+"0","#save"
+"0","ggsave(""plots/pcaplot.png"")"
