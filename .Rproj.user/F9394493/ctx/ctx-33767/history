@@ -1,0 +1,512 @@
+write.csv(resIGFDF, file = "output_files/DEGs_IGF_vs_LH_AllGenes.csv", row.names = FALSE, quote = FALSE)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Extract Differentially Expressed Genes (PDGF v. Control)
+#summary of DEGs
+summary(results(dds, contrast=c("condition","PDGF","LH"), alpha=0.05))
+#save DEGs
+#extract results for IGF vs LH as a regular data.frame
+resPDGF <- results(dds, contrast = c("condition","PDGF","LH"))
+resPDGFDF <- as.data.frame(resPDGF)
+#add gene_id from the row names
+resPDGFDF$rat_gene_id <- rownames(resPDGFDF)
+#add the symbol column from rowData(dds)
+resPDGFDF$rat_gene_symbol <- mcols(dds)$rat_gene_symbol
+#reorder to: symbol, gene_id, baseMean, log2FC, lfcSE, stat, pvalue, padj
+resPDGFDF <- resPDGFDF[, c("rat_gene_id","rat_gene_symbol","baseMean","log2FoldChange","lfcSE","stat","pvalue","padj")]
+#clear rownames
+rownames(resPDGFDF) <- NULL
+#view
+glimpse(resPDGFDF)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Save Differentially Expressed Genes (PDGF v. Control)
+#write out to a CSV
+write.csv(resPDGFDF, file = "output_files/DEGs_PDGF_vs_LH_AllGenes.csv", row.names = FALSE, quote = FALSE)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Make PCA Plot (The DESeq Way)
+#perform PCA
+#variance-stabilizing transformation
+vsd <- vst(dds, blind = FALSE)
+#pull out grouping factor (condition)
+groupingfactor <- "condition"
+#PCA data, % var
+pcaDat <- plotPCA(vsd, intgroup = groupingfactor, returnData = TRUE)
+percentVar <- round(100 * attr(pcaDat, "percentVar"))
+#make PCA plot
+#plot
+ggplot(pcaDat, aes(x = .data[["PC1"]], y = .data[["PC2"]], color = .data[[groupingfactor]], shape = .data[[groupingfactor]])) +
+geom_point(size = 4) +
+geom_hline(yintercept = 0, linetype = "dashed") +
+geom_vline(xintercept = 0, linetype = "dashed") +
+scale_x_continuous(limits = c(-30, 30), expand = c(0, 0)) +
+scale_y_continuous(limits = c(-30, 30), expand = c(0, 0)) +
+coord_fixed() +
+scale_shape_manual(values = c(16, 17, 15)) +
+theme_cowplot() +
+theme(panel.border = element_rect(color = "black", fill = NA, linewidth = 1), axis.line = element_blank()) +
+scale_color_manual(values = c("black", "green", "blue")) +
+labs(title = "Principal Component Analysis",
+x = paste0("PC1: ", percentVar[1], "% Variance"),
+y = paste0("PC2: ", percentVar[2], "% Variance"),
+color = "Condition", shape = "Condition")
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Save PCA Plot
+#save
+ggsave("plots/pcaplot.png")
+#IGF v. LH
+#set sig cutoffs
+resIGFDF$diffexpressed <- "NO"
+resIGFDF$diffexpressed[resIGFDF$log2FoldChange > 0.585 & resIGFDF$padj < 0.05] <- "Upregulated"
+resIGFDF$diffexpressed[resIGFDF$log2FoldChange < -0.585 & resIGFDF$padj < 0.05] <- "Downregulated"
+#make volcano plot
+vp1 <- ggplot(data = resIGFDF, aes(x = log2FoldChange, y = -log10(padj), col = diffexpressed)) +
+geom_vline(xintercept = c(-0.585, 0.585), col = "black", linetype = 'dashed') +
+geom_hline(yintercept = -log10(0.05), col = "black", linetype = 'dashed') +
+geom_point(size = 2) +
+scale_color_manual(values = c("lightblue2","gray","lightcoral"),labels = c("Downregulated","Not Significant","Upregulated")) +
+coord_cartesian(ylim = c(0, 150), xlim = c(-10, 10)) +
+labs(title = "IGF vs Control", x = expression("Log"[2]*"FC"), y = expression("-log"[10]*"p-adj")) +
+scale_x_continuous(breaks = seq(-10, 10, 2)) +
+theme_classic() +
+theme(legend.title = element_blank()) +
+theme(plot.title.position = "panel", plot.title = element_text(face = "bold",hjust = 0.5), plot.margin = margin(5,5,5,5))
+#view
+vp1
+#specify genes of interest
+genes_to_label <- c("Mmp2", "Tagln", "Lgals3", "Cnn1", "Myocd", "Srf", "Mkl1")
+label_df <- subset(resIGFDF, rat_gene_symbol %in% genes_to_label)
+#label genes of interest
+vp1_labeled <- vp1 +
+geom_point(size = 2, alpha = 0.6) + geom_point(data  = label_df, aes(x = log2FoldChange, y = -log10(padj)), color = "black", size  = 2) +
+geom_text_repel(data = label_df, aes(label  = rat_gene_symbol), color = "black", size = 2, box.padding = 0.2, point.padding = 0.1)
+#view
+vp1_labeled
+results(resIGFDF) |>
+rownames_to_column("gene") |>
+filter(padj < 0.05) |>
+slice_max(order_by = abs(log2FoldChange), n = 10) -> top_genes_IGF
+resIGFDF |>
+rownames_to_column("gene") |>
+filter(padj < 0.05) |>
+slice_max(order_by = abs(log2FoldChange), n = 10) -> top_genes_IGF
+resIGFDF |>
+rownames_to_column("gene") |>
+filter(padj < 0.05) |>
+slice_max(order_by = abs(log2FoldChange), n = 10) -> top_genes_IGF
+resIGFDF |>
+rownames_to_column("gene") |>
+filter(padj < 0.05) |>
+slice_max(order_by = abs(log2FoldChange), n = 10) -> top_genes_IGF
+resIGFDF |>
+rownames_to_column("gene") |>
+dplyr::filter(padj < 0.05) |>
+slice_max(order_by = abs(log2FoldChange), n = 10) -> top_genes_IGF
+View(resIGFDF)
+View(top_genes_IGF)
+#label volcano plot
+#label genes of interest
+vp1_top10 <- vp1 +
+geom_point(size = 2, alpha = 0.6) + geom_point(data  = top_genes_IGF, aes(x = log2FoldChange, y = -log10(padj)), color = "black", size  = 2) +
+geom_text_repel(data = top_genes_IGF, aes(label  = rat_gene_symbol), color = "black", size = 2, box.padding = 0.2, point.padding = 0.1)
+#view
+vp1_labeled
+#filter top10 differentially expressed genes
+resIGFDF |>
+rownames_to_column("gene") |>
+dplyr::filter(padj < 0.05) |>
+slice_max(order_by = abs(log2FoldChange), n = 10) -> top_genes_IGF
+#label volcano plot
+#label genes of interest
+vp1_top10 <- vp1 +
+geom_point(size = 2, alpha = 0.6) + geom_point(data  = top_genes_IGF, aes(x = log2FoldChange, y = -log10(padj)), color = "black", size  = 2) +
+geom_text_repel(data = top_genes_IGF, aes(label  = rat_gene_symbol), color = "black", size = 2, box.padding = 0.2, point.padding = 0.1)
+#view
+vp1_labeled
+#view
+vp1_top10
+#filter top10 differentially expressed genes
+resIGFDF |>
+rownames_to_column("gene") |>
+dplyr::filter(padj < 0.05) |>
+slice_max(order_by = padj), n = 10) -> top_genes_IGF
+#filter top10 differentially expressed genes
+resIGFDF |>
+rownames_to_column("gene") |>
+dplyr::filter(padj < 0.05) |>
+slice_max((order_by = padj), n = 10) -> top_genes_IGF
+#label volcano plot
+#label genes of interest
+vp1_top10 <- vp1 +
+geom_point(size = 2, alpha = 0.6) + geom_point(data  = top_genes_IGF, aes(x = log2FoldChange, y = -log10(padj)), color = "black", size  = 2) +
+geom_text_repel(data = top_genes_IGF, aes(label  = rat_gene_symbol), color = "black", size = 2, box.padding = 0.2, point.padding = 0.1)
+#view
+vp1_top10
+#filter top10 differentially expressed genes
+resIGFDF |>
+rownames_to_column("gene") |>
+dplyr::filter(padj < 0.05) |>
+slice_min((order_by = padj), n = 10) -> top_genes_IGF
+#label volcano plot
+#label genes of interest
+vp1_top10 <- vp1 +
+geom_point(size = 2, alpha = 0.6) + geom_point(data  = top_genes_IGF, aes(x = log2FoldChange, y = -log10(padj)), color = "black", size  = 2) +
+geom_text_repel(data = top_genes_IGF, aes(label  = rat_gene_symbol), color = "black", size = 2, box.padding = 0.2, point.padding = 0.1)
+#view
+vp1_top10
+#save
+ggsave(vp1, "plots/volcanoplotIGF.png")
+#save
+ggsave("plots/volcanoplotIGF.png", vp1)
+#save
+ggsave("plots/volcanoplotIGF.png", vp1)
+ggsave("plots/volcanoplotIGFphenoswitchgenes.png", vp1_labeled)
+ggsave("plots/volcanoplotIGFtop10.png", vp1_top10)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Basic Volcano Plot
+#PDGF v. LH
+#set sig cutoffs
+resPDGFDF$diffexpressed <- "NO"
+resPDGFDF$diffexpressed[resPDGFDF$log2FoldChange > 0.585 & resPDGFDF$padj < 0.05] <- "Upregulated"
+resPDGFDF$diffexpressed[resPDGFDF$log2FoldChange < -0.585 & resPDGFDF$padj < 0.05] <- "Downregulated"
+#make volcano plot
+vp2 <- ggplot(data = resPDGFDF, aes(x = log2FoldChange, y = -log10(padj), col = diffexpressed)) +
+geom_vline(xintercept = c(-0.585, 0.585), col = "black", linetype = 'dashed') +
+geom_hline(yintercept = -log10(0.05), col = "black", linetype = 'dashed') +
+geom_point(size = 2) +
+scale_color_manual(values = c("lightblue2","gray","lightcoral"),labels = c("Downregulated","Not Significant","Upregulated")) +
+coord_cartesian(ylim = c(0, 150), xlim = c(-10, 10)) +
+labs(title = "IGF vs Control", x = expression("Log"[2]*"FC"), y = expression("-log"[10]*"p-adj")) +
+scale_x_continuous(breaks = seq(-10, 10, 2)) +
+theme_classic() +
+theme(legend.title = element_blank()) +
+theme(plot.title.position = "panel", plot.title = element_text(face = "bold",hjust = 0.5), plot.margin = margin(5,5,5,5))
+#view
+vp2
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Basic Volcano Plot
+#PDGF v. LH
+#set sig cutoffs
+resPDGFDF$diffexpressed <- "NO"
+resPDGFDF$diffexpressed[resPDGFDF$log2FoldChange > 0.585 & resPDGFDF$padj < 0.05] <- "Upregulated"
+resPDGFDF$diffexpressed[resPDGFDF$log2FoldChange < -0.585 & resPDGFDF$padj < 0.05] <- "Downregulated"
+#make volcano plot
+vp2 <- ggplot(data = resPDGFDF, aes(x = log2FoldChange, y = -log10(padj), col = diffexpressed)) +
+geom_vline(xintercept = c(-0.585, 0.585), col = "black", linetype = 'dashed') +
+geom_hline(yintercept = -log10(0.05), col = "black", linetype = 'dashed') +
+geom_point(size = 2) +
+scale_color_manual(values = c("lightblue2","gray","lightcoral"),labels = c("Downregulated","Not Significant","Upregulated")) +
+coord_cartesian(ylim = c(0, 150), xlim = c(-10, 10)) +
+labs(title = "PDGF vs Control", x = expression("Log"[2]*"FC"), y = expression("-log"[10]*"p-adj")) +
+scale_x_continuous(breaks = seq(-10, 10, 2)) +
+theme_classic() +
+theme(legend.title = element_blank()) +
+theme(plot.title.position = "panel", plot.title = element_text(face = "bold",hjust = 0.5), plot.margin = margin(5,5,5,5))
+#view
+vp2
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Volcano Plot with Genes of Interest Labeled
+#specify genes of interest
+genes_to_label <- c("Mmp2", "Tagln", "Lgals3", "Cnn1", "Myocd", "Srf", "Mkl1")
+label_df <- subset(resPDGFDF, rat_gene_symbol %in% genes_to_label)
+#label genes of interest
+vp2_labeled <- vp2 +
+geom_point(size = 2, alpha = 0.6) +
+geom_point(data  = label_df, aes(x = log2FoldChange, y = -log10(padj)), color = "black", size  = 2) +
+geom_text_repel(data = label_df, aes(label  = rat_gene_symbol), color = "black", size = 2, box.padding = 0.2, point.padding = 0.1)
+#view
+vp2_labeled
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Volcano Plot with Top 10 Most Significant Genes Labeled
+#filter top10 most significant genes
+resPDGFDF |>
+rownames_to_column("gene") |>
+dplyr::filter(padj < 0.05) |>
+slice_min((order_by = padj), n = 10) -> top_genes_PDGF
+#label volcano plot
+vp2_top10 <- vp2 +
+geom_point(size = 2, alpha = 0.6) +
+geom_point(data  = top_genes_PDGF, aes(x = log2FoldChange, y = -log10(padj)), color = "black", size  = 2) +
+geom_text_repel(data = top_genes_PDGF, aes(label  = rat_gene_symbol), color = "black", size = 2, box.padding = 0.2, point.padding = 0.1)
+#view
+vp2_top10
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Save Volcano Plots
+#save
+ggsave("plots/volcanoplotPDGF.png", vp2)
+ggsave("plots/volcanoplotPDGFphenoswitchgenes.png", vp2_labeled)
+ggsave("plots/volcanoplotPDGFtop10.png", vp2_top10)
+#i will use this for linear regression analysis later on
+#make merged data frame that only keeps gene ids and symbols from one results file and keeps all results columns from both columns
+res_deseq_df <- merge(as.data.frame(resPDGFDF[,c(1, 2, 3, 4, 5, 6, 7, 8)]),as.data.frame(resIGFDF[,c(4, 5, 6, 7, 8)]), by="row.names", all.x = TRUE)
+#rename columns
+colnames(res_deseq_df) <- c("row_names", "rat_gene_id", "rat_gene_symbol", "baseMean", "log2FC_PDGF", "lfcSE_PDGF", "stat_PDGF", "pval_PDGF", "padj_PDGF", "log2FC_IGF", "lfcSE_IGF", "stat_IGF", "pval_IGF", "padj_IGF")
+#drop rownames column
+res_deseq_df <- res_deseq_df |>
+dplyr::select(-row_names)
+#view
+glimpse(res_deseq_df)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Make Merged Data Frame of DESeq Results
+#i will use this for linear regression analysis later on
+#make merged data frame that only keeps gene ids and symbols from one results file and keeps all results columns from both columns
+res_deseq_df <- merge(as.data.frame(resPDGFDF[,c(1, 2, 3, 4, 5, 6, 7, 8)]),as.data.frame(resIGFDF[,c(4, 5, 6, 7, 8)]), by="row.names", all.x = TRUE)
+#rename columns
+colnames(res_deseq_df) <- c("row_names", "rat_gene_id", "rat_gene_symbol", "baseMean", "log2FC_PDGF", "lfcSE_PDGF", "stat_PDGF", "pval_PDGF", "padj_PDGF", "log2FC_IGF", "lfcSE_IGF", "stat_IGF", "pval_IGF", "padj_IGF")
+#drop rownames column
+res_deseq_df <- res_deseq_df |>
+dplyr::select(-row_names)
+#view
+glimpse(res_deseq_df)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Save Merged Data Frame of DESeq Results
+#write out to a CSV
+write.csv(res_deseq_df, file = "output_files/DEGs_PDGF_vs_LH_IGF_vs_LH_AllGenes.csv", row.names = FALSE, quote = FALSE)
+#| echo: false
+#| message: false
+#| warning: false
+#| label: Session Information
+sessionInfo()
+install.packages("devtools")
+install.packages("devtools")
+devtools::install_version("dbplyr", version = "2.3.4")
+library(dbplyr)
+#| echo: false
+#| message: false
+#| warning: false
+#| label: Session Information
+sessionInfo()
+packageVersion("dbplyr")
+remove.packages("dbplyr")
+remove.packages("dbplyr", lib = .libPaths()[1])
+devtools::install_version("dbplyr", version = "2.3.4")
+packageVersion("dbplyr")
+library(rtracklayer)
+annotation_file <- import("annotation_file/Rattus_norvegicus.mRatBN7.2.113.gtf.gz")
+View(annotation_file)
+genes <- annotation_file[annotation_file$type == "gene"]
+gene_map <- as.data.frame(genes) |>
+select(gene_id, gene_name) |>
+distinct()
+gene_map <- as.data.frame(genes) |>
+select(gene_id, gene_name) |>
+dplyr::distinct()
+gene_map <- as.data.frame(genes) |>
+dplyr::select(gene_id, gene_name) |>
+dplyr::distinct()
+gene_map <- annotation_file[annotation_file$type == "gene"]
+gene_map <- as.data.frame(genes) |>
+dplyr::select(gene_id, gene_name) |>
+dplyr::distinct()
+gene_map <- annotation_file[annotation_file$type == "gene"]
+gene_map <- as.data.frame(gene_map) |>
+dplyr::select(gene_id, gene_name) |>
+dplyr::distinct()
+View(gene_map)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Library
+#load packages needed for pipeline
+library(tidyverse)
+library(cowplot)
+library(DESeq2)
+#library(AnnotationDbi)
+#library(AnnotationHub)
+library(ggrepel)
+library(dbplyr)
+library(rtracklayer)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Load In and View Data in Count Files
+#set paths
+data_path <- "data"
+csv_files <- list.files(path = data_path, pattern = "\\.csv$", full.names = TRUE)
+#loop that loads in each count file and names it
+for (file in csv_files) {
+df_name <- tools::file_path_sans_ext(basename(file))  #strip .csv extension
+assign(df_name, read.csv(file), envir = .GlobalEnv)   #load into global environment
+}
+#view an example counts file
+glimpse(LHNS1_counts)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Tidy Columns in Individual Data Frames
+#get names of data.frames in global environment
+df_names <- ls(envir = .GlobalEnv)[sapply(ls(envir = .GlobalEnv), function(x) is.data.frame(get(x)))]
+#loop through each data frame and apply changes
+for (df_name in df_names) {
+df <-get(df_name)
+if("X" %in% names(df)) {
+df <- df |>
+dplyr::rename(rat_gene_id = X) |> #renames X column in df
+dplyr::mutate(rat_gene_id = str_trim(rat_gene_id)) #trims white space
+}
+assign(df_name, df, envir = .GlobalEnv)
+}
+#view an example counts file
+glimpse(LHNS1_counts)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Make Merged Counts Data Frame
+#get list of data.frames
+dfs <- list(LHNS1_counts, LHNS2_counts, LHNS3_counts, IGFNS1_counts, IGFNS2_counts, IGFNS3_counts, PDGFNS1_counts, PDGFNS2_counts, PDGFNS3_counts)
+#merge
+rat_counts <- purrr::reduce(dfs, full_join, by = "rat_gene_id")
+#rename columns
+#specify old column names
+old_column_names <- c("LHNS1_aligned.bam", "LHNS2_aligned.bam", "LHNS3_aligned.bam", "IGFNS1_aligned.bam", "IGFNS2_aligned.bam", "IGFNS3_aligned.bam", "PDGFNS1_aligned.bam", "PDGFNS2_aligned.bam", "PDGFNS3_aligned.bam")
+#specify new column names
+new_column_names <- c("LHNS1", "LHNS2", "LHNS3", "IGFNS1", "IGFNS2", "IGFNS3", "PDGFNS1", "PDGFNS2", "PDGFNS3")
+#rename
+names(rat_counts)[names(rat_counts) %in% old_column_names] <- new_column_names
+#view merged counts df
+glimpse(rat_counts)
+annotation_file <- import("annotation_file/Rattus_norvegicus.mRatBN7.2.113.gtf.gz")
+annotation_file <- import("annotation_file/Rattus_norvegicus.mRatBN7.2.113.gtf.gz")
+View(rat_counts)
+View(rat_counts)
+gene_map <- annotation_file[annotation_file$type == "gene"]
+gene_map <- as.data.frame(gene_map) |>
+dplyr::select(gene_id, gene_name) |>
+dplyr::distinct()
+rat_counts <- left_join(rat_counts, gene_map, by = c("rat_gene_id" = "gene_id"))
+View(rat_counts)
+gene_map <- as.data.frame(gene_map) |>
+dplyr::select(gene_id, gene_name) |>
+dplyr::distinct() |>
+rename(rat_gene_symbol = gene_name)
+View(gene_map)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Library
+#load packages needed for pipeline
+library(tidyverse)
+library(cowplot)
+library(DESeq2)
+#library(AnnotationDbi)
+#library(AnnotationHub)
+library(ggrepel)
+library(dbplyr)
+library(rtracklayer)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Load In and View Data in Count Files
+#set paths
+data_path <- "data"
+csv_files <- list.files(path = data_path, pattern = "\\.csv$", full.names = TRUE)
+#loop that loads in each count file and names it
+for (file in csv_files) {
+df_name <- tools::file_path_sans_ext(basename(file))  #strip .csv extension
+assign(df_name, read.csv(file), envir = .GlobalEnv)   #load into global environment
+}
+#view an example counts file
+glimpse(LHNS1_counts)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Tidy Columns in Individual Data Frames
+#get names of data.frames in global environment
+df_names <- ls(envir = .GlobalEnv)[sapply(ls(envir = .GlobalEnv), function(x) is.data.frame(get(x)))]
+#loop through each data frame and apply changes
+for (df_name in df_names) {
+df <-get(df_name)
+if("X" %in% names(df)) {
+df <- df |>
+dplyr::rename(rat_gene_id = X) |> #renames X column in df
+dplyr::mutate(rat_gene_id = str_trim(rat_gene_id)) #trims white space
+}
+assign(df_name, df, envir = .GlobalEnv)
+}
+#view an example counts file
+glimpse(LHNS1_counts)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Make Merged Counts Data Frame
+#get list of data.frames
+dfs <- list(LHNS1_counts, LHNS2_counts, LHNS3_counts, IGFNS1_counts, IGFNS2_counts, IGFNS3_counts, PDGFNS1_counts, PDGFNS2_counts, PDGFNS3_counts)
+#merge
+rat_counts <- purrr::reduce(dfs, full_join, by = "rat_gene_id")
+#rename columns
+#specify old column names
+old_column_names <- c("LHNS1_aligned.bam", "LHNS2_aligned.bam", "LHNS3_aligned.bam", "IGFNS1_aligned.bam", "IGFNS2_aligned.bam", "IGFNS3_aligned.bam", "PDGFNS1_aligned.bam", "PDGFNS2_aligned.bam", "PDGFNS3_aligned.bam")
+#specify new column names
+new_column_names <- c("LHNS1", "LHNS2", "LHNS3", "IGFNS1", "IGFNS2", "IGFNS3", "PDGFNS1", "PDGFNS2", "PDGFNS3")
+#rename
+names(rat_counts)[names(rat_counts) %in% old_column_names] <- new_column_names
+#view merged counts df
+glimpse(rat_counts)
+#import annotation file saved locally (Rattus_norvegicus.mRatBN7.2.113.gtf.gz from Ensembl) using rtracklayer
+annotation_file <- import("annotation_file/Rattus_norvegicus.mRatBN7.2.113.gtf.gz")
+#filter for entries containing gene
+gene_map <- annotation_file[annotation_file$type == "gene"]
+#pipe that converts gene_map to data.frame, select for gene_names and gene_ids, returns only distinct rows, renames gene_name to rat_gene_symbol
+gene_map <- as.data.frame(gene_map) |>
+dplyr::select(gene_id, gene_name) |>
+dplyr::distinct() |>
+rename(rat_gene_symbol = gene_name)
+#join rat counts and gene map by gene ids
+rat_counts <- left_join(rat_counts, gene_map, by = c("rat_gene_id" = "gene_id"))
+#rearrange the newly added rat_gene_symbol column to be second in line
+cols <- names(rat_counts)
+rat_counts <- rat_counts[, c(cols[1], "rat_gene_symbol", setdiff(cols[-1], "rat_gene_symbol"))]
+View(rat_counts)
+#view merged counts df with gene symbols
+glimpse(rat_counts)
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Visualize Symbol Mapping Efficiency
+#determine how many gene symbols mapped versus did not map
+#analyze mapped v. not mapped
+mapped_count <- sum(!is.na(rat_counts$rat_gene_symbol))
+unmapped_count <- sum(is.na(rat_counts$rat_gene_symbol))
+#make mapping summary
+mapping_summary <- c("Mapped" = mapped_count, "Unmapped" = unmapped_count)
+#make a data.frame
+mapping_summary <- enframe(mapping_summary, name = "Status", value = "Count")
+#add percentages
+mapping_summary <- mapping_summary |>
+mutate(Percent = round(Count / sum(Count) * 100, 1), Label = str_c(Percent, "%"))
+#view df
+head(mapping_summary)
+#visualize
+ggplot(mapping_summary, aes(x = "", y = Count, fill = Status)) +
+geom_bar(stat = "identity", width = 1) +
+coord_polar("y") +
+geom_text(aes(label = Label), position = position_stack(vjust = 0.45), color = "white", size = 5) +
+theme_void() +
+labs(title = "Mapping Summary") +
+scale_fill_manual(values = c("Mapped" = "plum3", "Unmapped" = "gray65"))
+#| code-fold: show
+#| message: false
+#| warning: false
+#| label: Save Merged Counts File
+#save
+write.csv(rat_counts, file = "output_files/counts.csv")

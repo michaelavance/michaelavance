@@ -3,7 +3,7 @@
     "path": "~/GitHub/michaelavance/projects/Differential_Gene_Expression_Visualization.qmd",
     "project_path": "projects/Differential_Gene_Expression_Visualization.qmd",
     "type": "quarto_markdown",
-    "hash": "2875739919",
+    "hash": "35884488",
     "contents": "",
     "dirty": false,
     "created": 1753210542249.0,
@@ -18,14 +18,14 @@
         "rmdVisualWrapConfigured": "true",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "2:0"
+        "rmdVisualModeLocation": "2820:1066.6666259765625"
     },
     "folds": "",
-    "lastKnownWriteTime": 1753210624,
+    "lastKnownWriteTime": 1753216216,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1753210624313,
+    "last_content_update": 1753216216444,
     "read_only": false,
     "read_only_alternatives": []
 }

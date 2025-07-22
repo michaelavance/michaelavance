@@ -33,10 +33,8 @@ Originally, all downstream analysis of the bulk RNA sequencing data was performe
 library(tidyverse)
 library(cowplot)
 library(DESeq2)
-library(AnnotationDbi)
-library(AnnotationHub)
 library(ggrepel)
-library(dbplyr)
+library(rtracklayer)
 ```
 
 ## Data Analysis
@@ -125,27 +123,28 @@ glimpse(rat_counts)
 #| message: false
 #| warning: false
 #| label: Map Rat Gene Symbols to Rat Gene IDs
-#pull rat gene ids that we will be mapping symbols to 
-genes <- rat_counts[,1]
+#import annotation file saved locally (Rattus_norvegicus.mRatBN7.2.113.gtf.gz from Ensembl) using rtracklayer
+annotation_file <- import("annotation_file/Rattus_norvegicus.mRatBN7.2.113.gtf.gz")
 
-#get ensembl database that will be used to map ids to symbols
-edb_rat <- AnnotationHub()[["AH116989"]]
+#filter for entries containing gene
+gene_map <- annotation_file[annotation_file$type == "gene"]
 
-#query ensembl database object to get symbols that match ids
-rat_gene_symbol <- mapIds(edb_rat, keys = genes, column = "SYMBOL", keytype = "GENEID", multiVals = "first")
+#convert gene_map to df
+gene_map_df <- as.data.frame(gene_map)
 
-#create new column inside rat_counts dataframe called rat_gene_symbol
-rat_counts$rat_gene_symbol <- rat_gene_symbol
+#pipe that takes gene_map df keeps all gene names that are not NA, selects gene_id and gene_name, checks for distinct rows, and renames gene_name to rat_gene_symbol
+gene_map_df <- gene_map_df |>
+  dplyr::filter(!is.na(gene_map_df$gene_name)) |>
+  dplyr::select(gene_id, gene_name) |>
+  dplyr::distinct() |>
+  dplyr::rename(rat_gene_symbol = gene_name)
 
-#assign unmapped cells NA
-rat_counts$rat_gene_symbol[rat_counts$rat_gene_symbol == ""] <- NA
+#join rat counts and gene map by gene ids
+rat_counts <- left_join(rat_counts, gene_map_df, by = c("rat_gene_id" = "gene_id"))
 
 #rearrange the newly added rat_gene_symbol column to be second in line
 cols <- names(rat_counts)
 rat_counts <- rat_counts[, c(cols[1], "rat_gene_symbol", setdiff(cols[-1], "rat_gene_symbol"))]
-
-#view merged counts df with gene symbols
-glimpse(rat_counts)
 ```
 
 #### Visualize Symbol Mapping Efficiency
