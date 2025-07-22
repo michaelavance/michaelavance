@@ -30,7 +30,11 @@ jobs:
             any::cowplot
             any::lme4
             any::lmerTest
-            any::psycModel 
+            any::psycModel
+            any::DESeq2
+            any::AnnotationDbi
+            any::AnnotationHub
+            any::ggrepel
             
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
