@@ -181,25 +181,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#save" id="toc-save" class="nav-link" data-scroll-target="#save">Save</a></li>
   </ul></li>
-  <li><a href="#deseq" id="toc-deseq" class="nav-link" data-scroll-target="#deseq">DESeq</a>
+  <li><a href="#deseq2" id="toc-deseq2" class="nav-link" data-scroll-target="#deseq2">DESeq2</a>
   <ul class="collapse">
-  <li><a href="#make-metadata-for-deseq" id="toc-make-metadata-for-deseq" class="nav-link" data-scroll-target="#make-metadata-for-deseq">Make Metadata for DESeq</a></li>
-  <li><a href="#make-count-matrix-for-deseq" id="toc-make-count-matrix-for-deseq" class="nav-link" data-scroll-target="#make-count-matrix-for-deseq">Make Count Matrix for DESeq</a></li>
-  <li><a href="#make-deseq-dataset" id="toc-make-deseq-dataset" class="nav-link" data-scroll-target="#make-deseq-dataset">Make DESeq Dataset</a></li>
+  <li><a href="#make-metadata-for-deseq2" id="toc-make-metadata-for-deseq2" class="nav-link" data-scroll-target="#make-metadata-for-deseq2">Make Metadata for DESeq2</a></li>
+  <li><a href="#make-count-matrix-for-deseq2" id="toc-make-count-matrix-for-deseq2" class="nav-link" data-scroll-target="#make-count-matrix-for-deseq2">Make Count Matrix for DESeq2</a></li>
+  <li><a href="#make-deseq2-dataset" id="toc-make-deseq2-dataset" class="nav-link" data-scroll-target="#make-deseq2-dataset">Make DESeq2 Dataset</a></li>
   <li><a href="#perform-deseq" id="toc-perform-deseq" class="nav-link" data-scroll-target="#perform-deseq">Perform DESeq</a></li>
   <li><a href="#extract-differentially-expressed-genes-igf-v.-control" id="toc-extract-differentially-expressed-genes-igf-v.-control" class="nav-link" data-scroll-target="#extract-differentially-expressed-genes-igf-v.-control">Extract Differentially Expressed Genes (IGF v. Control)</a></li>
   <li><a href="#save-differentially-expressed-genes-igf-v.-control" id="toc-save-differentially-expressed-genes-igf-v.-control" class="nav-link" data-scroll-target="#save-differentially-expressed-genes-igf-v.-control">Save Differentially Expressed Genes (IGF v. Control)</a></li>
   <li><a href="#extract-differentially-expressed-genes-pdgf-v.-control" id="toc-extract-differentially-expressed-genes-pdgf-v.-control" class="nav-link" data-scroll-target="#extract-differentially-expressed-genes-pdgf-v.-control">Extract Differentially Expressed Genes (PDGF v. Control)</a></li>
   <li><a href="#save-differentially-expressed-genes-pdgf-v.-control" id="toc-save-differentially-expressed-genes-pdgf-v.-control" class="nav-link" data-scroll-target="#save-differentially-expressed-genes-pdgf-v.-control">Save Differentially Expressed Genes (PDGF v. Control)</a></li>
-  <li><a href="#make-merged-data-frame-of-deseq-results" id="toc-make-merged-data-frame-of-deseq-results" class="nav-link" data-scroll-target="#make-merged-data-frame-of-deseq-results">Make Merged Data Frame of DESeq Results</a></li>
-  <li><a href="#save-merged-data-frame-of-deseq-results" id="toc-save-merged-data-frame-of-deseq-results" class="nav-link" data-scroll-target="#save-merged-data-frame-of-deseq-results">Save Merged Data Frame of DESeq Results</a></li>
+  <li><a href="#make-merged-data-frame-of-deseq2-results" id="toc-make-merged-data-frame-of-deseq2-results" class="nav-link" data-scroll-target="#make-merged-data-frame-of-deseq2-results">Make Merged Data Frame of DESeq2 Results</a></li>
+  <li><a href="#save-merged-data-frame-of-deseq2-results" id="toc-save-merged-data-frame-of-deseq2-results" class="nav-link" data-scroll-target="#save-merged-data-frame-of-deseq2-results">Save Merged Data Frame of DESeq2 Results</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data Visualization</a>
   <ul>
   <li><a href="#principal-component-analysis-pca" id="toc-principal-component-analysis-pca" class="nav-link" data-scroll-target="#principal-component-analysis-pca">Principal Component Analysis (PCA)</a>
   <ul class="collapse">
-  <li><a href="#make-pca-plot-the-deseq-way" id="toc-make-pca-plot-the-deseq-way" class="nav-link" data-scroll-target="#make-pca-plot-the-deseq-way">Make PCA Plot (The DESeq Way)</a></li>
+  <li><a href="#make-pca-plot-the-deseq2-way" id="toc-make-pca-plot-the-deseq2-way" class="nav-link" data-scroll-target="#make-pca-plot-the-deseq2-way">Make PCA Plot (The DESeq2 Way)</a></li>
   <li><a href="#save-pca-plot" id="toc-save-pca-plot" class="nav-link" data-scroll-target="#save-pca-plot">Save PCA Plot</a></li>
   </ul></li>
   <li><a href="#volcano-plots-igf-v.-control" id="toc-volcano-plots-igf-v.-control" class="nav-link" data-scroll-target="#volcano-plots-igf-v.-control">Volcano Plots (IGF v. Control)</a>
@@ -218,10 +218,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#linear-regression-analysis" id="toc-linear-regression-analysis" class="nav-link" data-scroll-target="#linear-regression-analysis">Linear Regression Analysis</a>
   <ul class="collapse">
-  <li><a href="#assign-group-variable-to-merged-deseq-results-data-frame" id="toc-assign-group-variable-to-merged-deseq-results-data-frame" class="nav-link" data-scroll-target="#assign-group-variable-to-merged-deseq-results-data-frame">Assign Group Variable to Merged DESeq Results Data Frame</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#assign-group-variable-to-merged-deseq2-results-data-frame" id="toc-assign-group-variable-to-merged-deseq2-results-data-frame" class="nav-link" data-scroll-target="#assign-group-variable-to-merged-deseq2-results-data-frame">Assign Group Variable to Merged DESeq2 Results Data Frame</a></li>
+  <li><a href="#perform-linear-regression-and-plot" id="toc-perform-linear-regression-and-plot" class="nav-link" data-scroll-target="#perform-linear-regression-and-plot">Perform Linear Regression and Plot</a></li>
+  <li><a href="#save-plot" id="toc-save-plot" class="nav-link" data-scroll-target="#save-plot">Save Plot</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#the-end" id="toc-the-end" class="nav-link" data-scroll-target="#the-end">The End</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   <li><a href="#session-information" id="toc-session-information" class="nav-link" data-scroll-target="#session-information">Session Information</a></li>
   </ul>
@@ -281,6 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="library" class="level2">
 <h2 class="anchored" data-anchor-id="library">Library</h2>
+<p>Load all packages required for analysis.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -295,10 +298,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="data-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="data-analysis">Data Analysis</h2>
+<p>Here, we will learn how to manipulate counts data in R to determine differentially expressed genes in treated groups.</p>
 <section id="make-a-merged-counts-file" class="level3">
 <h3 class="anchored" data-anchor-id="make-a-merged-counts-file">Make a Merged Counts File</h3>
+<p>This section covers how to merge individual .csv files with counts data into a data frame with count information for every sample mapped back to gene IDs.</p>
 <section id="load-in-and-view-data-in-count-files" class="level4">
 <h4 class="anchored" data-anchor-id="load-in-and-view-data-in-count-files">Load In and View Data in Count Files</h4>
+<p>I have previously generated individual .csv files for each sample that contain gene IDs and associated count data for that sample. As mentioned above, I have three groups with three replicates per group. Samples from the control group will be denoted as LH throughout analysis (as the serum starved media contains lactalbumin hydrolysate). Samples from the IGF-1 treated group will be labeled IGF and samples from the PDGF-BB treated group will be labeled PDGF. Samples will also have their replicate number (1-3) associated with them. Here, we will use a loop that loads in each individual .csv file after specifying paths. Once data is loaded in, I will visualize what one of the counts files looks like with glimpse().</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -325,7 +331,7 @@ $ LHNS1_aligned.bam &lt;int&gt; 1, 0, 813, 7, 0, 0, 107, 0, 0, 6, 0, 0, 0, 101, 
 </section>
 <section id="tidy-columns-in-individual-data-frames" class="level4">
 <h4 class="anchored" data-anchor-id="tidy-columns-in-individual-data-frames">Tidy Columns in Individual Data Frames</h4>
-<p>In this code chunk, we will write a loop to rename the “X” column in each data frame and trim white space for each cell in this column. This is an important step to ensure proper merging of data.frames later.</p>
+<p>As you can see from the previous code, the gene IDs are housed in a column named “X”. In this code chunk, we will write a loop to rename the “X” column in each data frame and trim white space for each cell in this column. This is an important step to ensure proper merging of data frames later.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -356,6 +362,7 @@ $ LHNS1_aligned.bam &lt;int&gt; 1, 0, 813, 7, 0, 0, 107, 0, 0, 6, 0, 0, 0, 101, 
 </section>
 <section id="make-merged-counts-data-frame" class="level4">
 <h4 class="anchored" data-anchor-id="make-merged-counts-data-frame">Make Merged Counts Data Frame</h4>
+<p>The previous code renamed the column containing gene IDs; however, the column containing counts information still contains the full file name for the sample instead of just the sample name. Here, we will combine all individual counts files to make a merged counts data frame. In our data frame, we want a column for rat gene ids and a column that contains counts data for each individual sample. Once we have our merged counts data frame, we will rename the sample columns with proper sample names.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -395,8 +402,10 @@ $ PDGFNS3     &lt;int&gt; 1, 0, 966, 8, 0, 0, 140, 0, 0, 6, 0, 0, 0, 170, 83, 23
 </section>
 <section id="mapping-rat-gene-symbols-to-rat-gene-ids" class="level3">
 <h3 class="anchored" data-anchor-id="mapping-rat-gene-symbols-to-rat-gene-ids">Mapping Rat Gene Symbols to Rat Gene IDs</h3>
+<p>Gene symbols (i.e.&nbsp;<em>Acta2</em>) are much easier to digest than gene IDs (i.e.&nbsp;ENSRNOG00060028947). Here we will map gene symbols to our existing gene IDs in our data frame using a .gtf annotation file for <em>Rattus norvegicus</em> downloaded online from Ensembl (mRatBN7.2) that is now stored locally.</p>
 <section id="map-rat-gene-symbols-to-rat-gene-ids" class="level4">
 <h4 class="anchored" data-anchor-id="map-rat-gene-symbols-to-rat-gene-ids">Map Rat Gene Symbols to Rat Gene IDs</h4>
+<p>Here, we will load in our .gtf annotation file. Information from this annotation file will be filtered, converted to a data frame, and merged with our counts data frame. After some column manipulation, we will get a counts data frame that has a column for rat gene symbols, a column for rate gene IDs, and columns that contain count data for each sample.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -427,6 +436,7 @@ $ PDGFNS3     &lt;int&gt; 1, 0, 966, 8, 0, 0, 140, 0, 0, 6, 0, 0, 0, 170, 83, 23
 </section>
 <section id="visualize-symbol-mapping-efficiency" class="level4">
 <h4 class="anchored" data-anchor-id="visualize-symbol-mapping-efficiency">Visualize Symbol Mapping Efficiency</h4>
+<p>We now have mapped gene symbols to gene IDs, but how efficient was our mapping? Here we will visualize mapping efficiency with a pie chart.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -475,12 +485,14 @@ $ PDGFNS3     &lt;int&gt; 1, 0, 966, 8, 0, 0, 140, 0, 0, 6, 0, 0, 0, 170, 83, 23
 </div>
 </div>
 <p><strong>Figure 2:</strong> Pie chart displaying the proportion of gene symbols that successfully mapped to gene IDs (purple) and gene symbols that did not map to gene IDs (grey).</p>
+<p>Notice that our mapping was not 100% efficient. That’s okay, not every Ensembl ID has a gene symbol that maps to it! However, our percentage of mapped symbols was quite high, so we can move with analysis.</p>
 </section>
 </section>
 <section id="save-merged-counts-file" class="level3">
 <h3 class="anchored" data-anchor-id="save-merged-counts-file">Save Merged Counts File</h3>
 <section id="save" class="level4">
 <h4 class="anchored" data-anchor-id="save">Save</h4>
+<p>Here we will save out our counts file to an output_files folder.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -490,10 +502,12 @@ $ PDGFNS3     &lt;int&gt; 1, 0, 966, 8, 0, 0, 140, 0, 0, 6, 0, 0, 0, 170, 83, 23
 </div>
 </section>
 </section>
-<section id="deseq" class="level3">
-<h3 class="anchored" data-anchor-id="deseq">DESeq</h3>
-<section id="make-metadata-for-deseq" class="level4">
-<h4 class="anchored" data-anchor-id="make-metadata-for-deseq">Make Metadata for DESeq</h4>
+<section id="deseq2" class="level3">
+<h3 class="anchored" data-anchor-id="deseq2">DESeq2</h3>
+<p>Currently, we only have a data frame with counts data. Counts data tells us the number of sequence reads that align to a particular gene for each sample. We do not know if our genes were differentially expressed across groups. DESeq2 is a package in R that is used to identify differentially expressed genes using our counts data.</p>
+<section id="make-metadata-for-deseq2" class="level4">
+<h4 class="anchored" data-anchor-id="make-metadata-for-deseq2">Make Metadata for DESeq2</h4>
+<p>Here, we will make a metadata data frame which is required for DESeq2. The metadata contains sample names in rows. It has one condition column and each cell contains the condition the sample maps to. For example, in my dataset I have nine samples with three conditions: LH, IGF, and PDGF. We will also define our reference level which is the baseline for comparison (LH).</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -510,17 +524,25 @@ $ PDGFNS3     &lt;int&gt; 1, 0, 966, 8, 0, 0, 140, 0, 0, 6, 0, 0, 0, 170, 83, 23
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>metadata<span class="sc">$</span>condition <span class="ot">&lt;-</span> <span class="fu">relevel</span>(metadata<span class="sc">$</span>condition, <span class="at">ref =</span> <span class="st">"LH"</span>)</span>
 <span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(metadata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(metadata, <span class="dv">9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Rows: 9
-Columns: 1
-$ condition &lt;fct&gt; LH, LH, LH, IGF, IGF, IGF, PDGF, PDGF, PDGF</code></pre>
+<pre><code>        condition
+LHNS1          LH
+LHNS2          LH
+LHNS3          LH
+IGFNS1        IGF
+IGFNS2        IGF
+IGFNS3        IGF
+PDGFNS1      PDGF
+PDGFNS2      PDGF
+PDGFNS3      PDGF</code></pre>
 </div>
 </div>
 </section>
-<section id="make-count-matrix-for-deseq" class="level4">
-<h4 class="anchored" data-anchor-id="make-count-matrix-for-deseq">Make Count Matrix for DESeq</h4>
+<section id="make-count-matrix-for-deseq2" class="level4">
+<h4 class="anchored" data-anchor-id="make-count-matrix-for-deseq2">Make Count Matrix for DESeq2</h4>
+<p>We have already generated a count matrix previously, but there are specific requirements for the count matrix needed to run DESeq2. we will generate a count matrix with gene IDs as row names and samples as column names. Each cell will contain the associated count data.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -554,8 +576,9 @@ ENSRNOG00000055342       0</code></pre>
 </div>
 </div>
 </section>
-<section id="make-deseq-dataset" class="level4">
-<h4 class="anchored" data-anchor-id="make-deseq-dataset">Make DESeq Dataset</h4>
+<section id="make-deseq2-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="make-deseq2-dataset">Make DESeq2 Dataset</h4>
+<p>Now that we have metadata and a count matrix, we will make a DESeq2 dataset that will store both of these items. We will also specify that we are looking at gene expression based on a “condition” factor (found in our metadata). After making the dataset, we will re-add in mapped gene symbols so that they stay associated with the DESeq2 dataset.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -588,6 +611,7 @@ colData names(1): condition</code></pre>
 </section>
 <section id="perform-deseq" class="level4">
 <h4 class="anchored" data-anchor-id="perform-deseq">Perform DESeq</h4>
+<p>Finally, we will run DESeq on our DESeq2 dataset. We will then view the results.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -601,6 +625,7 @@ colData names(1): condition</code></pre>
 </section>
 <section id="extract-differentially-expressed-genes-igf-v.-control" class="level4">
 <h4 class="anchored" data-anchor-id="extract-differentially-expressed-genes-igf-v.-control">Extract Differentially Expressed Genes (IGF v. Control)</h4>
+<p>We can see that IGF v. LH were compared, but now we need to extract the differential expression data into a dataframe for this comparison. After some manipulation, we will have a data frame containing columns like rat gene name and gene symbol and columns with different metrics of differential expression data (i.e.&nbsp;log2FoldChange, adjusted p-value, etc.). This will be used in our volcano plot analysis later on.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -657,6 +682,7 @@ $ padj            &lt;dbl&gt; NA, NA, 8.593717e-01, 5.553377e-01, NA, NA, 8.6110
 </section>
 <section id="save-differentially-expressed-genes-igf-v.-control" class="level4">
 <h4 class="anchored" data-anchor-id="save-differentially-expressed-genes-igf-v.-control">Save Differentially Expressed Genes (IGF v. Control)</h4>
+<p>Here, we will save our data frame containing DESeq2 results for the IGF v. LH comparison.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -667,6 +693,7 @@ $ padj            &lt;dbl&gt; NA, NA, 8.593717e-01, 5.553377e-01, NA, NA, 8.6110
 </section>
 <section id="extract-differentially-expressed-genes-pdgf-v.-control" class="level4">
 <h4 class="anchored" data-anchor-id="extract-differentially-expressed-genes-pdgf-v.-control">Extract Differentially Expressed Genes (PDGF v. Control)</h4>
+<p>We can also see that PDGF v. LH were compared, but we also need to extract the differential expression data into a dataframe for this comparison. After some manipulation, we will have a data frame containing columns like rat gene name and gene symbol and columns with different metrics of differential expression data (i.e.&nbsp;log2FoldChange, adjusted p-value, etc.). This will be used in our volcano plot analysis later on.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -723,6 +750,7 @@ $ padj            &lt;dbl&gt; NA, NA, 9.925101e-01, 6.015809e-01, NA, NA, 5.4356
 </section>
 <section id="save-differentially-expressed-genes-pdgf-v.-control" class="level4">
 <h4 class="anchored" data-anchor-id="save-differentially-expressed-genes-pdgf-v.-control">Save Differentially Expressed Genes (PDGF v. Control)</h4>
+<p>Here, we will save our data frame containing DESeq2 results for the PDGF v. LH comparison.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -731,8 +759,9 @@ $ padj            &lt;dbl&gt; NA, NA, 9.925101e-01, 6.015809e-01, NA, NA, 5.4356
 </details>
 </div>
 </section>
-<section id="make-merged-data-frame-of-deseq-results" class="level4">
-<h4 class="anchored" data-anchor-id="make-merged-data-frame-of-deseq-results">Make Merged Data Frame of DESeq Results</h4>
+<section id="make-merged-data-frame-of-deseq2-results" class="level4">
+<h4 class="anchored" data-anchor-id="make-merged-data-frame-of-deseq2-results">Make Merged Data Frame of DESeq2 Results</h4>
+<p>Finally, we will want to make a merged data frame that contains a column for gene IDs, a column for gene_symbols, and all associated differential expression data for both comparisons (IGF v. LH and PDGF v. LH). We will use this later on for linear regression analysis.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -769,8 +798,9 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621613, NA, 0.1273134, NA, NA, NA, NA, NA, 
 </div>
 </div>
 </section>
-<section id="save-merged-data-frame-of-deseq-results" class="level4">
-<h4 class="anchored" data-anchor-id="save-merged-data-frame-of-deseq-results">Save Merged Data Frame of DESeq Results</h4>
+<section id="save-merged-data-frame-of-deseq2-results" class="level4">
+<h4 class="anchored" data-anchor-id="save-merged-data-frame-of-deseq2-results">Save Merged Data Frame of DESeq2 Results</h4>
+<p>Now we will save our merged data frame containing DESeq2 results for both comparisons.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -783,10 +813,13 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621613, NA, 0.1273134, NA, NA, NA, NA, NA, 
 </section>
 <section id="data-visualization" class="level2">
 <h2 class="anchored" data-anchor-id="data-visualization">Data Visualization</h2>
+<p>Now for the fun part, getting to see the changes in our data! This section will go over a few methods that can be used to visualize gene expression data.</p>
 <section id="principal-component-analysis-pca" class="level3">
 <h3 class="anchored" data-anchor-id="principal-component-analysis-pca">Principal Component Analysis (PCA)</h3>
-<section id="make-pca-plot-the-deseq-way" class="level4">
-<h4 class="anchored" data-anchor-id="make-pca-plot-the-deseq-way">Make PCA Plot (The DESeq Way)</h4>
+<p>Principal components analysis is a way to capture the variation in our gene expression data, allowing us to compare gene expression profiles across samples from our groups. This section will go over how to perform PCA analysis and plot principal components.</p>
+<section id="make-pca-plot-the-deseq2-way" class="level4">
+<h4 class="anchored" data-anchor-id="make-pca-plot-the-deseq2-way">Make PCA Plot (The DESeq2 Way)</h4>
+<p>In class, we learned to perform PCA with tidymodels, but DESeq2 has a built-in method for principal components analysis that will be used here. We will perform variance-stabilizing transformation on our dataset. Then, we will perform PCA and pull out a few factors into new objects that will be helpful for plotting. Finally, we will use ggplot2 to plot our first two principal components allowing us to analyze changes in gene expression profiles across samples.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -822,7 +855,7 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621613, NA, 0.1273134, NA, NA, NA, NA, NA, 
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Differential_Gene_Expression_Visualization_files/figure-html/Make PCA Plot (The DESeq Way)-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Differential_Gene_Expression_Visualization_files/figure-html/Make PCA Plot (The DESeq2 Way)-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -831,6 +864,7 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621613, NA, 0.1273134, NA, NA, NA, NA, NA, 
 </section>
 <section id="save-pca-plot" class="level4">
 <h4 class="anchored" data-anchor-id="save-pca-plot">Save PCA Plot</h4>
+<p>Here, we will save a .png of our PCA plot.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -842,8 +876,10 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621613, NA, 0.1273134, NA, NA, NA, NA, NA, 
 </section>
 <section id="volcano-plots-igf-v.-control" class="level3">
 <h3 class="anchored" data-anchor-id="volcano-plots-igf-v.-control">Volcano Plots (IGF v. Control)</h3>
+<p>Another way to visualize differential expression data is through volcano plots. A volcano plot is a type of scatter plot that plots fold change on the x-axis and statistical significance on the y-axis. These are both metrics that we obtain from DESeq2 comparisons. We will plot both comparisons we made separately to determine genes that were significantly differentially expressed in IGF v. Control samples or PDGF v. Control Samples. Let’s explore the IGF v. Control comparison here.</p>
 <section id="basic-volcano-plot" class="level4">
 <h4 class="anchored" data-anchor-id="basic-volcano-plot">Basic Volcano Plot</h4>
+<p>Here, we will use ggplot2 to plot a basic volcano plot. We will use some sorting to differentially color significantly downregulated genes, significantly upregulated genes, and nonsignificantly differentially regulated genes. Significance cutoffs will be indicated by dashed lines.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -881,6 +917,7 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621613, NA, 0.1273134, NA, NA, NA, NA, NA, 
 </section>
 <section id="volcano-plot-with-genes-of-interest-labeled" class="level4">
 <h4 class="anchored" data-anchor-id="volcano-plot-with-genes-of-interest-labeled">Volcano Plot with Genes of Interest Labeled</h4>
+<p>Now, we will take the generated volcano plot and label a few genes of interest. For example, I have added some genes important in phenotypic switch.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -909,6 +946,7 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621613, NA, 0.1273134, NA, NA, NA, NA, NA, 
 </section>
 <section id="volcano-plot-with-top-10-most-significant-genes-labeled" class="level4">
 <h4 class="anchored" data-anchor-id="volcano-plot-with-top-10-most-significant-genes-labeled">Volcano Plot with Top 10 Most Significant Genes Labeled</h4>
+<p>Finally, we will use some filtering to label our most significantly differentially regulated genes (top 10).</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -939,6 +977,7 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621613, NA, 0.1273134, NA, NA, NA, NA, NA, 
 </section>
 <section id="save-volcano-plots" class="level4">
 <h4 class="anchored" data-anchor-id="save-volcano-plots">Save Volcano Plots</h4>
+<p>Here, we will save volcano plots created for the IGF v. Control condition.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -952,8 +991,10 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621613, NA, 0.1273134, NA, NA, NA, NA, NA, 
 </section>
 <section id="volcano-plots-pdgf-v.-control" class="level3">
 <h3 class="anchored" data-anchor-id="volcano-plots-pdgf-v.-control">Volcano Plots (PDGF v. Control)</h3>
+<p>Now, we will shift our attention and explore the PDGF v. Control comparison with the same plots.</p>
 <section id="basic-volcano-plot-1" class="level4">
 <h4 class="anchored" data-anchor-id="basic-volcano-plot-1">Basic Volcano Plot</h4>
+<p>Here, we will use ggplot2 to plot a basic volcano plot. We will use some sorting to differentially color significantly downregulated genes, significantly upregulated genes, and nonsignificantly differentially regulated genes. Significance cutoffs will be indicated by dashed lines.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -991,6 +1032,7 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621613, NA, 0.1273134, NA, NA, NA, NA, NA, 
 </section>
 <section id="volcano-plot-with-genes-of-interest-labeled-1" class="level4">
 <h4 class="anchored" data-anchor-id="volcano-plot-with-genes-of-interest-labeled-1">Volcano Plot with Genes of Interest Labeled</h4>
+<p>Now, we will take the generated volcano plot and label a few genes of interest. For example, I have added some genes important in phenotypic switch.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -1019,6 +1061,7 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621613, NA, 0.1273134, NA, NA, NA, NA, NA, 
 </section>
 <section id="volcano-plot-with-top-10-most-significant-genes-labeled-1" class="level4">
 <h4 class="anchored" data-anchor-id="volcano-plot-with-top-10-most-significant-genes-labeled-1">Volcano Plot with Top 10 Most Significant Genes Labeled</h4>
+<p>Finally, we will use some filtering to label our most significantly differentially regulated genes (top 10).</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -1049,6 +1092,7 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621613, NA, 0.1273134, NA, NA, NA, NA, NA, 
 </section>
 <section id="save-volcano-plots-1" class="level4">
 <h4 class="anchored" data-anchor-id="save-volcano-plots-1">Save Volcano Plots</h4>
+<p>Here, we will save volcano plots created for the PDGF v. Control condition.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -1062,19 +1106,124 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621613, NA, 0.1273134, NA, NA, NA, NA, NA, 
 </section>
 <section id="linear-regression-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="linear-regression-analysis">Linear Regression Analysis</h3>
-<section id="assign-group-variable-to-merged-deseq-results-data-frame" class="level4">
-<h4 class="anchored" data-anchor-id="assign-group-variable-to-merged-deseq-results-data-frame">Assign Group Variable to Merged DESeq Results Data Frame</h4>
+<p>Linear regression analysis is a method that is used to analyze the relationship between two different variables. For my gene expression data, I would like to better understand if gene expression changes in VSMCs after IGF-1 treatment are correlated with gene expression changes in VSMCs after PDGF treatment.</p>
+<section id="assign-group-variable-to-merged-deseq2-results-data-frame" class="level4">
+<h4 class="anchored" data-anchor-id="assign-group-variable-to-merged-deseq2-results-data-frame">Assign Group Variable to Merged DESeq2 Results Data Frame</h4>
+<p>Here, we will assign a “group” variable based off of significance status for coloring on our later generated linear regression plot. This code was adapted from <em>Hayes et al.&nbsp;2022</em>.<sup>3</sup></p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">#makes PDGF Sig Column that states if each gene is significantly differentially regulated (YES) or not (NO) in the PDGF treated group</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>res_deseq_df <span class="ot">&lt;-</span> res_deseq_df</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(res_deseq_df))){</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (res_deseq_df<span class="sc">$</span>padj_PDGF[i]<span class="sc">&lt;</span><span class="fl">0.05</span> <span class="sc">&amp;</span> (<span class="sc">!</span><span class="fu">is.na</span>(res_deseq_df<span class="sc">$</span>padj_PDGF[i]))){</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>PDGFSig[i] <span class="ot">=</span> <span class="st">'YES'</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>PDGFSig[i] <span class="ot">=</span> <span class="st">'NO'</span></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a><span class="co">#makes IGF Sig Column that states if each gene is significantly differentially regulated (YES) or not (NO) in the PDGF treated group</span></span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(res_deseq_df))){</span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (res_deseq_df<span class="sc">$</span>padj_IGF[i]<span class="sc">&lt;</span><span class="fl">0.05</span> <span class="sc">&amp;</span> (<span class="sc">!</span><span class="fu">is.na</span>(res_deseq_df<span class="sc">$</span>padj_IGF[i]))){</span>
+<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>IGFSig[i] <span class="ot">=</span> <span class="st">'YES'</span></span>
+<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb44-17"><a href="#cb44-17" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
+<span id="cb44-18"><a href="#cb44-18" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>IGFSig[i] <span class="ot">=</span> <span class="st">'NO'</span></span>
+<span id="cb44-19"><a href="#cb44-19" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb44-20"><a href="#cb44-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb44-21"><a href="#cb44-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-22"><a href="#cb44-22" aria-hidden="true" tabindex="-1"></a><span class="co">#assigns groups based on significance status</span></span>
+<span id="cb44-23"><a href="#cb44-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(res_deseq_df))){</span>
+<span id="cb44-24"><a href="#cb44-24" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (res_deseq_df<span class="sc">$</span>PDGFSig[i] <span class="sc">==</span> <span class="st">'YES'</span> <span class="sc">&amp;</span> res_deseq_df<span class="sc">$</span>IGFSig[i] <span class="sc">==</span> <span class="st">'NO'</span>){</span>
+<span id="cb44-25"><a href="#cb44-25" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>Group[i] <span class="ot">=</span> <span class="dv">1</span>}</span>
+<span id="cb44-26"><a href="#cb44-26" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (res_deseq_df<span class="sc">$</span>PDGFSig[i] <span class="sc">==</span> <span class="st">'NO'</span> <span class="sc">&amp;</span> res_deseq_df<span class="sc">$</span>IGFSig[i] <span class="sc">==</span> <span class="st">'YES'</span>){</span>
+<span id="cb44-27"><a href="#cb44-27" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>Group[i] <span class="ot">=</span> <span class="dv">2</span>}</span>
+<span id="cb44-28"><a href="#cb44-28" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (res_deseq_df<span class="sc">$</span>PDGFSig[i] <span class="sc">==</span> <span class="st">'YES'</span> <span class="sc">&amp;</span> res_deseq_df<span class="sc">$</span>IGFSig[i] <span class="sc">==</span> <span class="st">'YES'</span>){</span>
+<span id="cb44-29"><a href="#cb44-29" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>Group[i] <span class="ot">=</span> <span class="dv">3</span>}</span>
+<span id="cb44-30"><a href="#cb44-30" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
+<span id="cb44-31"><a href="#cb44-31" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>Group[i] <span class="ot">=</span> <span class="dv">4</span>}</span>
+<span id="cb44-32"><a href="#cb44-32" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb44-33"><a href="#cb44-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb44-34"><a href="#cb44-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-35"><a href="#cb44-35" aria-hidden="true" tabindex="-1"></a><span class="co">#view results </span></span>
+<span id="cb44-36"><a href="#cb44-36" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(res_deseq_df<span class="sc">$</span>Group)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    1     2     3     4 
+ 2720  1332  2450 24060 </code></pre>
+</div>
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co">#subsets all significant genes (IGF, PDGF, IGF &amp; PDGF) into a new object while leaving out non significant genes</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>res_deseq_df_final <span class="ot">&lt;-</span> <span class="fu">subset</span>(res_deseq_df, res_deseq_df<span class="sc">$</span>Group <span class="sc">!=</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
-<section id="section" class="level4">
-<h4 class="anchored" data-anchor-id="section"></h4>
+<section id="perform-linear-regression-and-plot" class="level4">
+<h4 class="anchored" data-anchor-id="perform-linear-regression-and-plot">Perform Linear Regression and Plot</h4>
+<p>Here, we will fit a model for linear regression on our significantly differentially expressed genes that were subset in the previous step. We will be comparing the log2fold change of gene expression between IGF-1 treated VSMCs and PDGF-treated VSMCs. Next, we will use ggplot2 to build a scatter plot that contains data points that are differentially colored based on their “Group” variable (which denotes significance status, see above). Fold change for the two different comparisons will be plotted on the x and y axis. Metrics extracted from the linear regression analysis that evaluate the fit of the model are also included.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co">#fit model for linear regression</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>fit1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(log2FC_IGF <span class="sc">~</span> log2FC_PDGF, <span class="at">data =</span> res_deseq_df_final)</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Build the plot directly from the full data frame</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(res_deseq_df_final, <span class="fu">aes</span>(<span class="at">x =</span> log2FC_PDGF, <span class="at">y =</span> log2FC_IGF, <span class="at">color =</span> <span class="fu">factor</span>(Group))) <span class="sc">+</span></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">slope =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">color =</span> <span class="st">"gray69"</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">se =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Linear Regression, IGF v. PDGF, All Significant Genes"</span>,</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"PDGF (Log2FC)"</span>,</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"IGF (Log2FC)"</span>,</span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="fu">paste</span>(</span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Slope ="</span>, <span class="fu">signif</span>(fit1<span class="sc">$</span>coef[[<span class="dv">2</span>]], <span class="dv">3</span>),</span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">"p ="</span>, <span class="fu">signif</span>(<span class="fu">summary</span>(fit1)<span class="sc">$</span>coef[<span class="dv">2</span>, <span class="dv">4</span>], <span class="dv">3</span>),</span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Adj R² ="</span>, <span class="fu">signif</span>(<span class="fu">summary</span>(fit1)<span class="sc">$</span>adj.r.squared, <span class="dv">3</span>),</span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Intercept ="</span>, <span class="fu">signif</span>(fit1<span class="sc">$</span>coef[[<span class="dv">1</span>]], <span class="dv">3</span>))) <span class="sc">+</span></span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>( <span class="at">name =</span> <span class="st">"Significant (padj &lt; 0.05)"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"green"</span>, <span class="st">"black"</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"PDGF only"</span>, <span class="st">"IGF only"</span>, <span class="st">"PDGF &amp; IGF"</span>)) <span class="sc">+</span></span>
+<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">11</span>) <span class="sc">+</span></span>
+<span id="cb47-19"><a href="#cb47-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">11</span>) <span class="sc">+</span></span>
+<span id="cb47-20"><a href="#cb47-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cowplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Differential_Gene_Expression_Visualization_files/figure-html/Perform Linear Regression and Plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Figure 10:</strong> Plotted is the relationship between changes in gene expression (Log2FC) in IGF-1 treated VSMCs and PDGF-treated VSMCs. Data points are colored based on their significance status: blue depicts genes that were only significantly differentially expressed after PDGF treatment, green depicts genes that were only significantly differentially expressed after PDGF treatment, and black depicts genes that were significantly differentially expressed after both IGF and PDGF treatment. The regression line is depicted in grey (y = 0.481x + -0.0789, R<sup>2</sup> = 0.351). A solid black line (y = x) is plotted for reference.</p>
+</section>
+<section id="save-plot" class="level4">
+<h4 class="anchored" data-anchor-id="save-plot">Save Plot</h4>
+<p>Here, we will save an image of our scatterplot with linear regression data as a .png.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/linreg_igfpdgf_allsiggenes.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 </section>
+</section>
+<section id="the-end" class="level2">
+<h2 class="anchored" data-anchor-id="the-end">The End</h2>
+<p>Here, I have provided an example on how to visualize and better understand bulk RNA sequencing data using R.</p>
+<p><img src="images/clipboard-1813410545.png" class="img-fluid"></p>
+<p><strong>Figure 11:</strong> Satisfied VSMC. Created with BioRender.com.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <ol type="1">
 <li>Bickel MA, Sherry DM, Bullen EC, Vance ML, Jones KL, Howard EW, Conley SM. Microvascular smooth muscle cells exhibit divergent phenotypic switching responses to platelet-derived growth factor and insulin-like growth factor 1. Microvasc Res. 2024 Jan;151:104609. doi: 10.1016/j.mvr.2023.104609. Epub 2023 Sep 15. PMID: 37716411; PMCID: PMC10842624.</li>
 <li>Tang HY, Chen AQ, Zhang H, Gao XF, Kong XQ, Zhang JJ. Vascular Smooth Muscle Cells Phenotypic Switching in Cardiovascular Diseases. Cells. 2022 Dec 15;11(24):4060. doi: 10.3390/cells11244060. PMID: 36552822; PMCID: PMC9777337.</li>
+<li>Hayes LN, An K, Carloni E, Li F, Vincent E, Trippaers C, Paranjpe M, Dölen G, Goff LA, Ramos A, Kano SI, Sawa A. Prenatal immune stress blunts microglia reactivity, impairing neurocircuitry. Nature. 2022 Oct;610(7931):327-334. doi: 10.1038/s41586-022-05274-z. Epub 2022 Sep 28. PMID: 36171283.</li>
 </ol>
 </section>
 <section id="session-information" class="level2">
@@ -1114,30 +1263,31 @@ other attached packages:
 [23] tidyverse_2.0.0            
 
 loaded via a namespace (and not attached):
- [1] httr_1.4.7               bit64_4.6.0-1            jsonlite_2.0.0          
- [4] blob_1.2.4               Rsamtools_2.14.0         GenomeInfoDbData_1.2.9  
- [7] yaml_2.3.10              pillar_1.11.0            RSQLite_2.4.2           
-[10] lattice_0.20-45          glue_1.8.0               digest_0.6.37           
-[13] RColorBrewer_1.1-3       XVector_0.38.0           htmltools_0.5.8.1       
-[16] Matrix_1.5-3             XML_3.99-0.18            pkgconfig_2.0.3         
-[19] zlibbioc_1.44.0          xtable_1.8-4             scales_1.4.0            
-[22] tzdb_0.5.0               BiocParallel_1.32.6      timechange_0.3.0        
-[25] annotate_1.76.0          KEGGREST_1.38.0          generics_0.1.4          
-[28] farver_2.1.2             cachem_1.1.0             withr_3.0.2             
-[31] cli_3.6.5                magrittr_2.0.3           crayon_1.5.3            
-[34] memoise_2.0.1            evaluate_1.0.4           textshaping_1.0.1       
-[37] tools_4.2.3              hms_1.1.3                BiocIO_1.8.0            
-[40] lifecycle_1.0.4          locfit_1.5-9.12          DelayedArray_0.24.0     
-[43] AnnotationDbi_1.60.2     Biostrings_2.66.0        compiler_4.2.3          
-[46] systemfonts_1.2.3        rlang_1.1.6              grid_4.2.3              
-[49] RCurl_1.98-1.17          rjson_0.2.23             labeling_0.4.3          
-[52] bitops_1.0-9             rmarkdown_2.29           restfulr_0.0.16         
-[55] gtable_0.3.6             codetools_0.2-19         DBI_1.2.3               
-[58] R6_2.6.1                 GenomicAlignments_1.34.1 knitr_1.50              
-[61] utf8_1.2.6               fastmap_1.2.0            bit_4.6.0               
-[64] ragg_1.4.0               stringi_1.8.7            parallel_4.2.3          
-[67] Rcpp_1.1.0               vctrs_0.6.5              geneplotter_1.76.0      
-[70] png_0.1-8                tidyselect_1.2.1         xfun_0.52               </code></pre>
+ [1] httr_1.4.7               splines_4.2.3            bit64_4.6.0-1           
+ [4] jsonlite_2.0.0           blob_1.2.4               Rsamtools_2.14.0        
+ [7] GenomeInfoDbData_1.2.9   yaml_2.3.10              pillar_1.11.0           
+[10] RSQLite_2.4.2            lattice_0.20-45          glue_1.8.0              
+[13] digest_0.6.37            RColorBrewer_1.1-3       XVector_0.38.0          
+[16] htmltools_0.5.8.1        Matrix_1.5-3             XML_3.99-0.18           
+[19] pkgconfig_2.0.3          zlibbioc_1.44.0          xtable_1.8-4            
+[22] scales_1.4.0             tzdb_0.5.0               BiocParallel_1.32.6     
+[25] timechange_0.3.0         annotate_1.76.0          mgcv_1.8-42             
+[28] KEGGREST_1.38.0          generics_0.1.4           farver_2.1.2            
+[31] cachem_1.1.0             withr_3.0.2              cli_3.6.5               
+[34] magrittr_2.0.3           crayon_1.5.3             memoise_2.0.1           
+[37] evaluate_1.0.4           nlme_3.1-162             textshaping_1.0.1       
+[40] tools_4.2.3              hms_1.1.3                BiocIO_1.8.0            
+[43] lifecycle_1.0.4          locfit_1.5-9.12          DelayedArray_0.24.0     
+[46] AnnotationDbi_1.60.2     Biostrings_2.66.0        compiler_4.2.3          
+[49] systemfonts_1.2.3        rlang_1.1.6              grid_4.2.3              
+[52] RCurl_1.98-1.17          rjson_0.2.23             labeling_0.4.3          
+[55] bitops_1.0-9             rmarkdown_2.29           restfulr_0.0.16         
+[58] gtable_0.3.6             codetools_0.2-19         DBI_1.2.3               
+[61] R6_2.6.1                 GenomicAlignments_1.34.1 knitr_1.50              
+[64] utf8_1.2.6               fastmap_1.2.0            bit_4.6.0               
+[67] ragg_1.4.0               stringi_1.8.7            parallel_4.2.3          
+[70] Rcpp_1.1.0               vctrs_0.6.5              geneplotter_1.76.0      
+[73] png_0.1-8                tidyselect_1.2.1         xfun_0.52               </code></pre>
 </div>
 </div>
 
