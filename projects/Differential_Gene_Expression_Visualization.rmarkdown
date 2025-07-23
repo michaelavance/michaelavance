@@ -10,6 +10,8 @@ toc: true
 toc-depth: 4
 ---
 
+
+
 ## About the Data
 
 The Conley Lab has previously published a paper that investigated the differential roles of platelet-derived growth factor BB (PDGF-BB) and insulin-like growth factor 1 (IGF-1) in induction of phenotypic switch in vascular smooth muscle cells (VSMCs).^1^ Phenotypic switch is a process in which VSMCs transition from their differentiated, contractile state to a more synthetic phenotype. From this state, they can adopt the phenotype many other cell types becoming more macrophage-like, osteochondrogenic-like, adipocyte-like, fibroblast-like, etc.^2^ The goal of this paper was to characterize the types of microvascular VSMC phenotypic switch induced by PDGF-BB and IGF-1.
@@ -26,6 +28,8 @@ Originally, all downstream analysis of the bulk RNA sequencing data was performe
 
 Load all packages required for analysis.
 
+
+
 ```{r}
 #| code-fold: show
 #| message: false
@@ -39,6 +43,8 @@ library(ggrepel)
 library(rtracklayer)
 ```
 
+
+
 ## Data Analysis
 
 Here, we will learn how to manipulate counts data in R to determine differentially expressed genes in treated groups.
@@ -50,6 +56,8 @@ This section covers how to merge individual .csv files with counts data into a d
 #### Load In and View Data in Count Files
 
 I have previously generated individual .csv files for each sample that contain gene IDs and associated count data for that sample. As mentioned above, I have three groups with three replicates per group. Samples from the control group will be denoted as LH throughout analysis (as the serum starved media contains lactalbumin hydrolysate). Samples from the IGF-1 treated group will be labeled IGF and samples from the PDGF-BB treated group will be labeled PDGF. Samples will also have their replicate number (1-3) associated with them. Here, we will use a loop that loads in each individual .csv file after specifying paths. Once data is loaded in, I will visualize what one of the counts files looks like with glimpse().
+
+
 
 ```{r}
 #| code-fold: show
@@ -70,9 +78,13 @@ for (file in csv_files) {
 glimpse(LHNS1_counts)
 ```
 
+
+
 #### Tidy Columns in Individual Data Frames
 
 As you can see from the previous code, the gene IDs are housed in a column named "X". In this code chunk, we will write a loop to rename the "X" column in each data frame and trim white space for each cell in this column. This is an important step to ensure proper merging of data frames later.
+
+
 
 ```{r}
 #| code-fold: show
@@ -97,9 +109,13 @@ for (df_name in df_names) {
 glimpse(LHNS1_counts)
 ```
 
+
+
 #### Make Merged Counts Data Frame
 
 The previous code renamed the column containing gene IDs; however, the column containing counts information still contains the full file name for the sample instead of just the sample name. Here, we will combine all individual counts files to make a merged counts data frame. In our data frame, we want a column for rat gene ids and a column that contains counts data for each individual sample. Once we have our merged counts data frame, we will rename the sample columns with proper sample names.
+
+
 
 ```{r}
 #| code-fold: show
@@ -124,6 +140,8 @@ names(rat_counts)[names(rat_counts) %in% old_column_names] <- new_column_names
 glimpse(rat_counts)
 ```
 
+
+
 ### Mapping Rat Gene Symbols to Rat Gene IDs
 
 Gene symbols (i.e. *Acta2*) are much easier to digest than gene IDs (i.e. ENSRNOG00060028947). Here we will map gene symbols to our existing gene IDs in our data frame using a .gtf annotation file for *Rattus norvegicus* downloaded online from Ensembl (mRatBN7.2) that is now stored locally.
@@ -131,6 +149,8 @@ Gene symbols (i.e. *Acta2*) are much easier to digest than gene IDs (i.e. ENSRNO
 #### Map Rat Gene Symbols to Rat Gene IDs
 
 Here, we will load in our .gtf annotation file. Information from this annotation file will be filtered, converted to a data frame, and merged with our counts data frame. After some column manipulation, we will get a counts data frame that has a column for rat gene symbols, a column for rate gene IDs, and columns that contain count data for each sample.
+
+
 
 ```{r}
 #| code-fold: show
@@ -164,9 +184,13 @@ rat_counts <- rat_counts[, c(cols[1], "rat_gene_symbol", setdiff(cols[-1], "rat_
 glimpse(rat_counts)
 ```
 
+
+
 #### Visualize Symbol Mapping Efficiency
 
 We now have mapped gene symbols to gene IDs, but how efficient was our mapping? Here we will visualize mapping efficiency with a pie chart.
+
+
 
 ```{r}
 #| code-fold: show
@@ -201,6 +225,8 @@ ggplot(mapping_summary, aes(x = "", y = Count, fill = Status)) +
   scale_fill_manual(values = c("Mapped" = "plum3", "Unmapped" = "gray65"))
 ```
 
+
+
 **Figure 2:** Pie chart displaying the proportion of gene symbols that successfully mapped to gene IDs (purple) and gene symbols that did not map to gene IDs (grey).
 
 Notice that our mapping was not 100% efficient. That's okay, not every Ensembl ID has a gene symbol that maps to it! However, our percentage of mapped symbols was quite high, so we can move with analysis.
@@ -211,6 +237,8 @@ Notice that our mapping was not 100% efficient. That's okay, not every Ensembl I
 
 Here we will save out our counts file to an output_files folder.
 
+
+
 ```{r}
 #| code-fold: show
 #| message: false
@@ -220,6 +248,8 @@ Here we will save out our counts file to an output_files folder.
 write.csv(rat_counts, file = "output_files/counts.csv")
 ```
 
+
+
 ### DESeq2
 
 Currently, we only have a data frame with counts data. Counts data tells us the number of sequence reads that align to a particular gene for each sample. We do not know if our genes were differentially expressed across groups. DESeq2 is a package in R that is used to identify differentially expressed genes using our counts data.
@@ -227,6 +257,8 @@ Currently, we only have a data frame with counts data. Counts data tells us the 
 #### Make Metadata for DESeq2
 
 Here, we will make a metadata data frame which is required for DESeq2. The metadata contains sample names in rows. It has one condition column and each cell contains the condition the sample maps to. For example, in my dataset I have nine samples with three conditions: LH, IGF, and PDGF. We will also define our reference level which is the baseline for comparison (LH).
+
+
 
 ```{r}
 #| code-fold: show
@@ -249,9 +281,13 @@ metadata$condition <- relevel(metadata$condition, ref = "LH")
 head(metadata, 9)
 ```
 
+
+
 #### Make Count Matrix for DESeq2
 
 We have already generated a count matrix previously, but there are specific requirements for the count matrix needed to run DESeq2. we will generate a count matrix with gene IDs as row names and samples as column names. Each cell will contain the associated count data.
+
+
 
 ```{r}
 #| code-fold: show
@@ -271,9 +307,13 @@ countMat <- as.matrix(countMat)
 head(countMat)
 ```
 
+
+
 #### Make DESeq2 Dataset
 
 Now that we have metadata and a count matrix, we will make a DESeq2 dataset that will store both of these items. We will also specify that we are looking at gene expression based on a "condition" factor (found in our metadata). After making the dataset, we will re-add in mapped gene symbols so that they stay associated with the DESeq2 dataset.
+
+
 
 ```{r}
 #| code-fold: show
@@ -295,9 +335,13 @@ mcols(dds)$rat_gene_symbol <- gene_symbols$rat_gene_symbol[match(rownames(dds), 
 head(dds)
 ```
 
+
+
 #### Perform DESeq
 
 Finally, we will run DESeq on our DESeq2 dataset. We will then view the results.
+
+
 
 ```{r}
 #| code-fold: show
@@ -308,9 +352,13 @@ dds <- DESeq(dds)
 resultsNames(dds)
 ```
 
+
+
 #### Extract Differentially Expressed Genes (IGF v. Control)
 
 We can see that IGF v. LH were compared, but now we need to extract the differential expression data into a dataframe for this comparison. After some manipulation, we will have a data frame containing columns like rat gene name and gene symbol and columns with different metrics of differential expression data (i.e. log2FoldChange, adjusted p-value, etc.). This will be used in our volcano plot analysis later on.
+
+
 
 ```{r}
 #| code-fold: show
@@ -341,9 +389,13 @@ rownames(resIGFDF) <- NULL
 glimpse(resIGFDF)
 ```
 
+
+
 #### Save Differentially Expressed Genes (IGF v. Control)
 
 Here, we will save our data frame containing DESeq2 results for the IGF v. LH comparison.
+
+
 
 ```{r}
 #| code-fold: show
@@ -354,9 +406,13 @@ Here, we will save our data frame containing DESeq2 results for the IGF v. LH co
 write.csv(resIGFDF, file = "output_files/DEGs_IGF_vs_LH_AllGenes.csv", row.names = FALSE, quote = FALSE)
 ```
 
+
+
 #### Extract Differentially Expressed Genes (PDGF v. Control)
 
 We can also see that PDGF v. LH were compared, but we also need to extract the differential expression data into a dataframe for this comparison. After some manipulation, we will have a data frame containing columns like rat gene name and gene symbol and columns with different metrics of differential expression data (i.e. log2FoldChange, adjusted p-value, etc.). This will be used in our volcano plot analysis later on.
+
+
 
 ```{r}
 #| code-fold: show
@@ -387,9 +443,13 @@ rownames(resPDGFDF) <- NULL
 glimpse(resPDGFDF)
 ```
 
+
+
 #### Save Differentially Expressed Genes (PDGF v. Control)
 
 Here, we will save our data frame containing DESeq2 results for the PDGF v. LH comparison.
+
+
 
 ```{r}
 #| code-fold: show
@@ -400,9 +460,13 @@ Here, we will save our data frame containing DESeq2 results for the PDGF v. LH c
 write.csv(resPDGFDF, file = "output_files/DEGs_PDGF_vs_LH_AllGenes.csv", row.names = FALSE, quote = FALSE)
 ```
 
+
+
 #### Make Merged Data Frame of DESeq2 Results
 
 Finally, we will want to make a merged data frame that contains a column for gene IDs, a column for gene_symbols, and all associated differential expression data for both comparisons (IGF v. LH and PDGF v. LH). We will use this later on for linear regression analysis.
+
+
 
 ```{r}
 #| code-fold: show
@@ -424,9 +488,13 @@ res_deseq_df <- res_deseq_df |>
 glimpse(res_deseq_df)
 ```
 
+
+
 #### Save Merged Data Frame of DESeq2 Results
 
 Now we will save our merged data frame containing DESeq2 results for both comparisons.
+
+
 
 ```{r}
 #| code-fold: show
@@ -436,6 +504,8 @@ Now we will save our merged data frame containing DESeq2 results for both compar
 #write out to a CSV
 write.csv(res_deseq_df, file = "output_files/DEGs_PDGF_vs_LH_IGF_vs_LH_AllGenes.csv", row.names = FALSE, quote = FALSE)
 ```
+
+
 
 ## Data Visualization
 
@@ -448,6 +518,8 @@ Principal components analysis is a way to capture the variation in our gene expr
 #### Make PCA Plot (The DESeq2 Way)
 
 In class, we learned to perform PCA with tidymodels, but DESeq2 has a built-in method for principal components analysis that will be used here. We will perform variance-stabilizing transformation on our dataset. Then, we will perform PCA and pull out a few factors into new objects that will be helpful for plotting. Finally, we will use ggplot2 to plot our first two principal components allowing us to analyze changes in gene expression profiles across samples.
+
+
 
 ```{r}
 #| code-fold: show
@@ -484,11 +556,15 @@ ggplot(pcaDat, aes(x = .data[["PC1"]], y = .data[["PC2"]], color = .data[[groupi
        color = "Condition", shape = "Condition")
 ```
 
+
+
 **Figure 3:** Principal component analysis was performed to compare gene expression profiles from samples across three groups (LH (control, black circles), IGF (green triangles), and PDGF (blue squares)). PC1 represents Principal Component 1 which explains 61% of variance. PC2 represents Principal Component 1 which explains 33% of variance.
 
 #### Save PCA Plot
 
 Here, we will save a .png of our PCA plot.
+
+
 
 ```{r}
 #| code-fold: show
@@ -499,6 +575,8 @@ Here, we will save a .png of our PCA plot.
 ggsave("plots/pcaplot.png")
 ```
 
+
+
 ### Volcano Plots (IGF v. Control)
 
 Another way to visualize differential expression data is through volcano plots. A volcano plot is a type of scatter plot that plots fold change on the x-axis and statistical significance on the y-axis. These are both metrics that we obtain from DESeq2 comparisons. We will plot both comparisons we made separately to determine genes that were significantly differentially expressed in IGF v. Control samples or PDGF v. Control Samples. Let's explore the IGF v. Control comparison here.
@@ -506,6 +584,8 @@ Another way to visualize differential expression data is through volcano plots. 
 #### Basic Volcano Plot
 
 Here, we will use ggplot2 to plot a basic volcano plot. We will use some sorting to differentially color significantly downregulated genes, significantly upregulated genes, and nonsignificantly differentially regulated genes. Significance cutoffs will be indicated by dashed lines.
+
+
 
 ```{r}
 #| code-fold: show
@@ -535,11 +615,15 @@ vp1 <- ggplot(data = resIGFDF, aes(x = log2FoldChange, y = -log10(padj), col = d
 vp1
 ```
 
+
+
 **Figure 4:** Volcano plot with Log2FC on the x-axis and the -Log(p-adjusted) on the y-axis. Significantly upregulated genes in the IGF-treated group versus the control group are shown in red and significantly downregulated genes in the IGF-treated group versus the control group are shown in blue. Dashed lines depict cutoffs for significance.
 
 #### Volcano Plot with Genes of Interest Labeled
 
 Now, we will take the generated volcano plot and label a few genes of interest. For example, I have added some genes important in phenotypic switch.
+
+
 
 ```{r}
 #| code-fold: show
@@ -560,11 +644,15 @@ vp1_labeled <- vp1 +
 vp1_labeled
 ```
 
+
+
 **Figure 5:** Volcano plot with Log2FC on the x-axis and the -Log(p-adjusted) on the y-axis. Significantly upregulated genes in the IGF-treated group versus the control group are shown in red and significantly downregulated genes in the IGF-treated group versus the control group are shown in blue. Dashed lines depict cutoffs for significance. Genes of interest important for phenotypic switch are labeled in black on the volcano plot.
 
 #### Volcano Plot with Top 10 Most Significant Genes Labeled
 
 Finally, we will use some filtering to label our most significantly differentially regulated genes (top 10).
+
+
 
 ```{r}
 #| code-fold: show
@@ -587,11 +675,15 @@ vp1_top10 <- vp1 +
 vp1_top10
 ```
 
+
+
 **Figure 6:** Volcano plot with Log2FC on the x-axis and the -Log(p-adjusted) on the y-axis. Significantly upregulated genes in the IGF-treated group versus the control group are shown in red and significantly downregulated genes in the IGF-treated group versus the control group are shown in blue. Dashed lines depict cutoffs for significance. The top 10 most significantly differentially regulated genes are labeled in black on the volcano plot.
 
 #### Save Volcano Plots
 
 Here, we will save volcano plots created for the IGF v. Control condition.
+
+
 
 ```{r}
 #| code-fold: show
@@ -604,6 +696,8 @@ ggsave("plots/volcanoplotIGFphenoswitchgenes.png", vp1_labeled)
 ggsave("plots/volcanoplotIGFtop10.png", vp1_top10)
 ```
 
+
+
 ### Volcano Plots (PDGF v. Control)
 
 Now, we will shift our attention and explore the PDGF v. Control comparison with the same plots.
@@ -611,6 +705,8 @@ Now, we will shift our attention and explore the PDGF v. Control comparison with
 #### Basic Volcano Plot
 
 Here, we will use ggplot2 to plot a basic volcano plot. We will use some sorting to differentially color significantly downregulated genes, significantly upregulated genes, and nonsignificantly differentially regulated genes. Significance cutoffs will be indicated by dashed lines.
+
+
 
 ```{r}
 #| code-fold: show
@@ -640,11 +736,15 @@ vp2 <- ggplot(data = resPDGFDF, aes(x = log2FoldChange, y = -log10(padj), col = 
 vp2
 ```
 
+
+
 **Figure 7:** Volcano plot with Log2FC on the x-axis and the -Log(p-adjusted) on the y-axis. Significantly upregulated genes in the PDGF-treated group versus the control group are shown in red and significantly downregulated genes in the PDGF-treated group versus the control group are shown in blue. Dashed lines depict cutoffs for significance.
 
 #### Volcano Plot with Genes of Interest Labeled
 
 Now, we will take the generated volcano plot and label a few genes of interest. For example, I have added some genes important in phenotypic switch.
+
+
 
 ```{r}
 #| code-fold: show
@@ -665,11 +765,15 @@ vp2_labeled <- vp2 +
 vp2_labeled
 ```
 
+
+
 **Figure 8:** Volcano plot with Log2FC on the x-axis and the -Log(p-adjusted) on the y-axis. Significantly upregulated genes in the PDGF-treated group versus the control group are shown in red and significantly downregulated genes in the PDGF-treated group versus the control group are shown in blue. Dashed lines depict cutoffs for significance. Genes of interest important for phenotypic switch are labeled in black on the volcano plot.
 
 #### Volcano Plot with Top 10 Most Significant Genes Labeled
 
 Finally, we will use some filtering to label our most significantly differentially regulated genes (top 10).
+
+
 
 ```{r}
 #| code-fold: show
@@ -692,11 +796,15 @@ vp2_top10 <- vp2 +
 vp2_top10
 ```
 
+
+
 **Figure 9:** Volcano plot with Log2FC on the x-axis and the -Log(p-adjusted) on the y-axis. Significantly upregulated genes in the PDGF-treated group versus the control group are shown in red and significantly downregulated genes in the PDGF-treated group versus the control group are shown in blue. Dashed lines depict cutoffs for significance. The top 10 most significantly differentially regulated genes are labeled in black on the volcano plot.
 
 #### Save Volcano Plots
 
 Here, we will save volcano plots created for the PDGF v. Control condition.
+
+
 
 ```{r}
 #| code-fold: show
@@ -709,6 +817,8 @@ ggsave("plots/volcanoplotPDGFphenoswitchgenes.png", vp2_labeled)
 ggsave("plots/volcanoplotPDGFtop10.png", vp2_top10)
 ```
 
+
+
 ### Linear Regression Analysis
 
 Linear regression analysis is a method that is used to analyze the relationship between two different variables. For my gene expression data, I would like to better understand if gene expression changes in VSMCs after IGF-1 treatment are correlated with gene expression changes in VSMCs after PDGF treatment.
@@ -716,6 +826,8 @@ Linear regression analysis is a method that is used to analyze the relationship 
 #### Assign Group Variable to Merged DESeq2 Results Data Frame
 
 Here, we will assign a "group" variable based off of significance status for coloring on our later generated linear regression plot. This code was adapted from *Hayes et al. 2022*.^3^
+
+
 
 ```{r}
 #| code-fold: show
@@ -763,9 +875,13 @@ table(res_deseq_df$Group)
 res_deseq_df_final <- subset(res_deseq_df, res_deseq_df$Group != 4)
 ```
 
+
+
 #### Perform Linear Regression and Plot
 
 Here, we will fit a model for linear regression on our significantly differentially expressed genes that were subset in the previous step. We will be comparing the log2fold change of gene expression between IGF-1 treated VSMCs and PDGF-treated VSMCs. Next, we will use ggplot2 to build a scatter plot that contains data points that are differentially colored based on their "Group" variable (which denotes significance status, see above). Fold change for the two different comparisons will be plotted on the x and y axis. Metrics extracted from the linear regression analysis that evaluate the fit of the model are also included.
+
+
 
 ```{r}
 #| code-fold: show
@@ -794,11 +910,15 @@ ggplot(res_deseq_df_final, aes(x = log2FC_PDGF, y = log2FC_IGF, color = factor(G
   theme_cowplot()
 ```
 
+
+
 **Figure 10:** Plotted is the relationship between changes in gene expression (Log2FC) in IGF-1 treated VSMCs and PDGF-treated VSMCs. Data points are colored based on their significance status: blue depicts genes that were only significantly differentially expressed after PDGF treatment, green depicts genes that were only significantly differentially expressed after PDGF treatment, and black depicts genes that were significantly differentially expressed after both IGF and PDGF treatment. The regression line is depicted in grey (y = 0.481x + -0.0789, R^2^ = 0.351). A solid black line (y = x) is plotted for reference.
 
 #### Save Plot
 
 Here, we will save an image of our scatterplot with linear regression data as a .png.
+
+
 
 ```{r}
 #| code-fold: show
@@ -808,6 +928,8 @@ Here, we will save an image of our scatterplot with linear regression data as a 
 #save
 ggsave("plots/linreg_igfpdgf_allsiggenes.png")
 ```
+
+
 
 ## The End
 
@@ -825,6 +947,8 @@ Here, I have provided an example on how to visualize and better understand bulk 
 
 ## Session Information
 
+
+
 ```{r}
 #| echo: false
 #| message: false
@@ -832,3 +956,4 @@ Here, I have provided an example on how to visualize and better understand bulk 
 #| label: Session Information
 sessionInfo()
 ```
+

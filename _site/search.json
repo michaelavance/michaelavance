@@ -75,5 +75,33 @@
     "title": "Differential Gene Expression Visualization",
     "section": "The End",
     "text": "The End\nHere, I have provided an example on how to visualize and better understand bulk RNA sequencing data using R.\n\nFigure 11: Satisfied VSMC. Created with BioRender.com."
+  },
+  {
+    "objectID": "index.html#biography",
+    "href": "index.html#biography",
+    "title": "Michaela L. Vance",
+    "section": "",
+    "text": "I am a Ph.D. Candidate in the Conley Lab in the Department of Cell Biology at the University of Oklahoma Health Sciences Center. In the Conley Lab, we use both cell and animal models to better understand the mechanisms underlying age-related cerebrovascular fragility associated with vascular cognitive impairment and dementia (VCID)."
+  },
+  {
+    "objectID": "index.html#research-goals",
+    "href": "index.html#research-goals",
+    "title": "Michaela L. Vance",
+    "section": "",
+    "text": "For my dissertation work, I am investigating the mechanisms underlying how age-related increases in brain senescence drive endothelial to mesenchymal transition (EndMT) in the brain microvasculature leading to cerebrovascular fragility and dysfunction. Senescent cells increase in the brain with age and components of the senescence-associated secretory phenotype can trigger EndMT. During EndMT, endothelial cells lose characteristic endothelial phenotypes, including some that are critical for cerebrovascular function, and transition to a mesenchymal-like phenotype. However, the role of EndMT, and its possible induction by senescent cells, in brain aging are unexplored. I aim using multi-omics approaches (scRNAseq) coupled with genetic mouse models to answer this question. By studying how senescent cells contribute to age-related cerebrovascular fragility and dysfunction through EndMT, novel therapeutic targets can be discovered to combat age-related VCID."
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Michaela L. Vance",
+    "section": "",
+    "text": "I have expertise in cell and molecular biology, mouse husbandry and neurological assessment, mouse surgical techniques, microscopy, and data science including bioinformatic analysis of bulk and scRNAseq datasets.\nAfter my dissertation work is completed, I plan to complete a postdoctoral fellowship. Find more details regarding my ongoing projects, my publications, and relevant experience on this website."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Michaela L. Vance",
+    "section": "",
+    "text": "I am a Ph.D. Candidate in the Conley Lab in the Department of Cell Biology at the University of Oklahoma Health Sciences Center. In the Conley Lab, we use both cell and animal models to better understand the mechanisms underlying age-related cerebrovascular fragility associated with vascular cognitive impairment and dementia (VCID).\n\n\n\nFor my dissertation work, I am investigating the mechanisms underlying how age-related increases in brain senescence drive endothelial to mesenchymal transition (EndMT) in the brain microvasculature leading to cerebrovascular fragility and dysfunction. Senescent cells increase in the brain with age and components of the senescence-associated secretory phenotype can trigger EndMT. During EndMT, endothelial cells lose characteristic endothelial phenotypes, including some that are critical for cerebrovascular function, and transition to a mesenchymal-like phenotype. However, the role of EndMT, and its possible induction by senescent cells, in brain aging are unexplored. I aim using multi-omics approaches (scRNAseq) coupled with genetic mouse models to answer this question. By studying how senescent cells contribute to age-related cerebrovascular fragility and dysfunction through EndMT, novel therapeutic targets can be discovered to combat age-related VCID.\n\n\n\nI have expertise in cell and molecular biology, mouse husbandry and neurological assessment, mouse surgical techniques, microscopy, and data science including bioinformatic analysis of bulk and scRNAseq datasets.\nAfter my dissertation work is completed, I plan to complete a postdoctoral fellowship. Find more details regarding my ongoing projects, my publications, and relevant experience on this website."
   }
 ]

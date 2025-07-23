@@ -7,5 +7,4 @@
 "0","library(cowplot)"
 "0","library(DESeq2)"
 "0","library(ggrepel)"
-"0","library(dbplyr)"
 "0","library(rtracklayer)"

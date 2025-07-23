@@ -18,6 +18,9 @@ about:
     - icon: envelope-fill
       text: Email
       href: "mailto:michaela-vance@ouhsc.edu"
+format:
+  html:
+    css: styles.css
 ---
 
 ::: column-page
