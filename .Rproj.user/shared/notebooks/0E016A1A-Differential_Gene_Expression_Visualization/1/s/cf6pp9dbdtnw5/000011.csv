@@ -1,55 +1,11 @@
-"0","#| code-fold: show"
-"0","#| message: false"
-"0","#| warning: false"
-"0","#| label: Extract Differentially Expressed Genes (IGF v. Control)"
-"0","#summary of DEGs"
-"0","summary(results(dds, contrast=c(""condition"",""IGF"",""LH""), alpha=0.05))"
-"1","
+"0","#view
+glimpse(resIGFDF)
 "
-"1","out of 21216 with nonzero total read count
-"
-"1","adjusted p-value < 0.05
-"
-"1","LFC > 0 (up)       : 1794, 8.5%
-"
-"1","LFC < 0 (down)     : 1988, 9.4%
-"
-"1","outliers [1]       : 0, 0%
-"
-"1","low counts [2]     : 5625, 27%
-"
-"1","(mean count < 3)
-"
-"1","[1] see 'cooksCutoff' argument of ?results
-"
-"1","[2] see 'independentFiltering' argument of ?results
-"
-"1","
-"
-"0","#save DEGs"
-"0","#extract results for IGF vs LH as a regular data.frame"
-"0","resIGF <- results(dds, contrast = c(""condition"",""IGF"",""LH""))"
-"0","resIGFDF <- as.data.frame(resIGF)"
-"0",""
-"0","#add gene_id from the row names"
-"0","resIGFDF$rat_gene_id <- rownames(resIGFDF)"
-"0",""
-"0","#add the symbol column from rowData(dds)"
-"0","resIGFDF$rat_gene_symbol <- mcols(dds)$rat_gene_symbol"
-"0",""
-"0","#reorder to: symbol, gene_id, baseMean, log2FC, lfcSE, stat, pvalue, padj"
-"0","resIGFDF <- resIGFDF[, c(""rat_gene_id"",""rat_gene_symbol"",""baseMean"",""log2FoldChange"",""lfcSE"",""stat"",""pvalue"",""padj"")]"
-"0",""
-"0","#clear rownames"
-"0","rownames(resIGFDF) <- NULL"
-"0",""
-"0","#view"
-"0","glimpse(resIGFDF)"
 "1","Rows: 30,562"
 "1",""
 "1","
 "
-"1","Columns: 8"
+"1","Columns: 9"
 "1",""
 "1","
 "
@@ -60,7 +16,8 @@ $ log2FoldChange  [3m[38;5;246m<dbl>[39m[23m -2.22523841[38;5;246m, [39m[
 $ lfcSE           [3m[38;5;246m<dbl>[39m[23m 2.7411566[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m0.1367222[38;5;246m, [39m0.8725030[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m0.2827141[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m0.9512155[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mN[39m…
 $ stat            [3m[38;5;246m<dbl>[39m[23m -0.8117881[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m0.3407220[38;5;246m, [39m0.9448071[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m-3.9085726[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m0.9310920[38;5;246m, [39m[31mNA[39m[38;5;246m,[39m…
 $ pvalue          [3m[38;5;246m<dbl>[39m[23m 4.169132e-01[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m7.333128e-01[38;5;246m, [39m3.447574e-01[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m9.284304e-05[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m3.51…
-$ padj            [3m[38;5;246m<dbl>[39m[23m [31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m8.593717e-01[38;5;246m, [39m5.553376e-01[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m8.611040e-04[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m5.621612e-01[38;5;246m, [39m…"
+$ padj            [3m[38;5;246m<dbl>[39m[23m [31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m8.593717e-01[38;5;246m, [39m5.553376e-01[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m8.611040e-04[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m[31mNA[39m[38;5;246m, [39m5.621612e-01[38;5;246m, [39m…
+$ diffexpressed   [3m[38;5;246m<chr>[39m[23m ""NO""[38;5;246m, [39m""NO""[38;5;246m, [39m""NO""[38;5;246m, [39m""NO""[38;5;246m, [39m""NO""[38;5;246m, [39m""NO""[38;5;246m, [39m""Downregulated""[38;5;246m, [39m""NO""[38;5;246m, [39m""NO""[38;5;246m, [39m""NO""[38;5;246m, [39m""NO""[38;5;246m, [39m""NO…"
 "1",""
 "1","
 "

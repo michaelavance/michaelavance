@@ -179,25 +179,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#save" id="toc-save" class="nav-link" data-scroll-target="#save">Save</a></li>
   </ul></li>
-  <li><a href="#deseq" id="toc-deseq" class="nav-link" data-scroll-target="#deseq">DESeq</a>
+  <li><a href="#deseq2" id="toc-deseq2" class="nav-link" data-scroll-target="#deseq2">DESeq2</a>
   <ul class="collapse">
-  <li><a href="#make-metadata-for-deseq" id="toc-make-metadata-for-deseq" class="nav-link" data-scroll-target="#make-metadata-for-deseq">Make Metadata for DESeq</a></li>
-  <li><a href="#make-count-matrix-for-deseq" id="toc-make-count-matrix-for-deseq" class="nav-link" data-scroll-target="#make-count-matrix-for-deseq">Make Count Matrix for DESeq</a></li>
-  <li><a href="#make-deseq-dataset" id="toc-make-deseq-dataset" class="nav-link" data-scroll-target="#make-deseq-dataset">Make DESeq Dataset</a></li>
+  <li><a href="#make-metadata-for-deseq2" id="toc-make-metadata-for-deseq2" class="nav-link" data-scroll-target="#make-metadata-for-deseq2">Make Metadata for DESeq2</a></li>
+  <li><a href="#make-count-matrix-for-deseq2" id="toc-make-count-matrix-for-deseq2" class="nav-link" data-scroll-target="#make-count-matrix-for-deseq2">Make Count Matrix for DESeq2</a></li>
+  <li><a href="#make-deseq2-dataset" id="toc-make-deseq2-dataset" class="nav-link" data-scroll-target="#make-deseq2-dataset">Make DESeq2 Dataset</a></li>
   <li><a href="#perform-deseq" id="toc-perform-deseq" class="nav-link" data-scroll-target="#perform-deseq">Perform DESeq</a></li>
   <li><a href="#extract-differentially-expressed-genes-igf-v.-control" id="toc-extract-differentially-expressed-genes-igf-v.-control" class="nav-link" data-scroll-target="#extract-differentially-expressed-genes-igf-v.-control">Extract Differentially Expressed Genes (IGF v. Control)</a></li>
   <li><a href="#save-differentially-expressed-genes-igf-v.-control" id="toc-save-differentially-expressed-genes-igf-v.-control" class="nav-link" data-scroll-target="#save-differentially-expressed-genes-igf-v.-control">Save Differentially Expressed Genes (IGF v. Control)</a></li>
   <li><a href="#extract-differentially-expressed-genes-pdgf-v.-control" id="toc-extract-differentially-expressed-genes-pdgf-v.-control" class="nav-link" data-scroll-target="#extract-differentially-expressed-genes-pdgf-v.-control">Extract Differentially Expressed Genes (PDGF v. Control)</a></li>
   <li><a href="#save-differentially-expressed-genes-pdgf-v.-control" id="toc-save-differentially-expressed-genes-pdgf-v.-control" class="nav-link" data-scroll-target="#save-differentially-expressed-genes-pdgf-v.-control">Save Differentially Expressed Genes (PDGF v. Control)</a></li>
-  <li><a href="#make-merged-data-frame-of-deseq-results" id="toc-make-merged-data-frame-of-deseq-results" class="nav-link" data-scroll-target="#make-merged-data-frame-of-deseq-results">Make Merged Data Frame of DESeq Results</a></li>
-  <li><a href="#save-merged-data-frame-of-deseq-results" id="toc-save-merged-data-frame-of-deseq-results" class="nav-link" data-scroll-target="#save-merged-data-frame-of-deseq-results">Save Merged Data Frame of DESeq Results</a></li>
+  <li><a href="#make-merged-data-frame-of-deseq2-results" id="toc-make-merged-data-frame-of-deseq2-results" class="nav-link" data-scroll-target="#make-merged-data-frame-of-deseq2-results">Make Merged Data Frame of DESeq2 Results</a></li>
+  <li><a href="#save-merged-data-frame-of-deseq2-results" id="toc-save-merged-data-frame-of-deseq2-results" class="nav-link" data-scroll-target="#save-merged-data-frame-of-deseq2-results">Save Merged Data Frame of DESeq2 Results</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data Visualization</a>
   <ul>
   <li><a href="#principal-component-analysis-pca" id="toc-principal-component-analysis-pca" class="nav-link" data-scroll-target="#principal-component-analysis-pca">Principal Component Analysis (PCA)</a>
   <ul class="collapse">
-  <li><a href="#make-pca-plot-the-deseq-way" id="toc-make-pca-plot-the-deseq-way" class="nav-link" data-scroll-target="#make-pca-plot-the-deseq-way">Make PCA Plot (The DESeq Way)</a></li>
+  <li><a href="#make-pca-plot-the-deseq2-way" id="toc-make-pca-plot-the-deseq2-way" class="nav-link" data-scroll-target="#make-pca-plot-the-deseq2-way">Make PCA Plot (The DESeq2 Way)</a></li>
   <li><a href="#save-pca-plot" id="toc-save-pca-plot" class="nav-link" data-scroll-target="#save-pca-plot">Save PCA Plot</a></li>
   </ul></li>
   <li><a href="#volcano-plots-igf-v.-control" id="toc-volcano-plots-igf-v.-control" class="nav-link" data-scroll-target="#volcano-plots-igf-v.-control">Volcano Plots (IGF v. Control)</a>
@@ -216,10 +216,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#linear-regression-analysis" id="toc-linear-regression-analysis" class="nav-link" data-scroll-target="#linear-regression-analysis">Linear Regression Analysis</a>
   <ul class="collapse">
-  <li><a href="#assign-group-variable-to-merged-deseq-results-data-frame" id="toc-assign-group-variable-to-merged-deseq-results-data-frame" class="nav-link" data-scroll-target="#assign-group-variable-to-merged-deseq-results-data-frame">Assign Group Variable to Merged DESeq Results Data Frame</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#assign-group-variable-to-merged-deseq2-results-data-frame" id="toc-assign-group-variable-to-merged-deseq2-results-data-frame" class="nav-link" data-scroll-target="#assign-group-variable-to-merged-deseq2-results-data-frame">Assign Group Variable to Merged DESeq2 Results Data Frame</a></li>
+  <li><a href="#perform-linear-regression-and-plot" id="toc-perform-linear-regression-and-plot" class="nav-link" data-scroll-target="#perform-linear-regression-and-plot">Perform Linear Regression and Plot</a></li>
+  <li><a href="#save-plot" id="toc-save-plot" class="nav-link" data-scroll-target="#save-plot">Save Plot</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#the-end" id="toc-the-end" class="nav-link" data-scroll-target="#the-end">The End</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   <li><a href="#session-information" id="toc-session-information" class="nav-link" data-scroll-target="#session-information">Session Information</a></li>
   </ul>
@@ -279,6 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="library" class="level2">
 <h2 class="anchored" data-anchor-id="library">Library</h2>
+<p>Load all packages required for analysis.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -286,19 +289,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DESeq2)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AnnotationDbi)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AnnotationHub)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dbplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rtracklayer)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 <section id="data-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="data-analysis">Data Analysis</h2>
+<p>Here, we will learn how to manipulate counts data in R to determine differentially expressed genes in treated groups.</p>
 <section id="make-a-merged-counts-file" class="level3">
 <h3 class="anchored" data-anchor-id="make-a-merged-counts-file">Make a Merged Counts File</h3>
+<p>This section covers how to merge individual .csv files with counts data into a data frame with count information for every sample mapped back to gene IDs.</p>
 <section id="load-in-and-view-data-in-count-files" class="level4">
 <h4 class="anchored" data-anchor-id="load-in-and-view-data-in-count-files">Load In and View Data in Count Files</h4>
+<p>I have previously generated individual .csv files for each sample that contain gene IDs and associated count data for that sample. As mentioned above, I have three groups with three replicates per group. Samples from the control group will be denoted as LH throughout analysis (as the serum starved media contains lactalbumin hydrolysate). Samples from the IGF-1 treated group will be labeled IGF and samples from the PDGF-BB treated group will be labeled PDGF. Samples will also have their replicate number (1-3) associated with them. Here, we will use a loop that loads in each individual .csv file after specifying paths. Once data is loaded in, I will visualize what one of the counts files looks like with glimpse().</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -325,7 +329,7 @@ $ LHNS1_aligned.bam &lt;int&gt; 1, 0, 813, 7, 0, 0, 107, 0, 0, 6, 0, 0, 0, 101, 
 </section>
 <section id="tidy-columns-in-individual-data-frames" class="level4">
 <h4 class="anchored" data-anchor-id="tidy-columns-in-individual-data-frames">Tidy Columns in Individual Data Frames</h4>
-<p>In this code chunk, we will write a loop to rename the “X” column in each data frame and trim white space for each cell in this column. This is an important step to ensure proper merging of data.frames later.</p>
+<p>As you can see from the previous code, the gene IDs are housed in a column named “X”. In this code chunk, we will write a loop to rename the “X” column in each data frame and trim white space for each cell in this column. This is an important step to ensure proper merging of data frames later.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -356,6 +360,7 @@ $ LHNS1_aligned.bam &lt;int&gt; 1, 0, 813, 7, 0, 0, 107, 0, 0, 6, 0, 0, 0, 101, 
 </section>
 <section id="make-merged-counts-data-frame" class="level4">
 <h4 class="anchored" data-anchor-id="make-merged-counts-data-frame">Make Merged Counts Data Frame</h4>
+<p>The previous code renamed the column containing gene IDs; however, the column containing counts information still contains the full file name for the sample instead of just the sample name. Here, we will combine all individual counts files to make a merged counts data frame. In our data frame, we want a column for rat gene ids and a column that contains counts data for each individual sample. Once we have our merged counts data frame, we will rename the sample columns with proper sample names.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -395,90 +400,79 @@ $ PDGFNS3     &lt;int&gt; 1, 0, 966, 8, 0, 0, 140, 0, 0, 6, 0, 0, 0, 170, 83, 23
 </section>
 <section id="mapping-rat-gene-symbols-to-rat-gene-ids" class="level3">
 <h3 class="anchored" data-anchor-id="mapping-rat-gene-symbols-to-rat-gene-ids">Mapping Rat Gene Symbols to Rat Gene IDs</h3>
+<p>Gene symbols (i.e.&nbsp;<em>Acta2</em>) are much easier to digest than gene IDs (i.e.&nbsp;ENSRNOG00060028947). Here we will map gene symbols to our existing gene IDs in our data frame using a .gtf annotation file for <em>Rattus norvegicus</em> downloaded online from Ensembl (mRatBN7.2) that is now stored locally.</p>
 <section id="map-rat-gene-symbols-to-rat-gene-ids" class="level4">
 <h4 class="anchored" data-anchor-id="map-rat-gene-symbols-to-rat-gene-ids">Map Rat Gene Symbols to Rat Gene IDs</h4>
+<p>Here, we will load in our .gtf annotation file. Information from this annotation file will be filtered, converted to a data frame, and merged with our counts data frame. After some column manipulation, we will get a counts data frame that has a column for rat gene symbols, a column for rate gene IDs, and columns that contain count data for each sample.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#pull rat gene ids that we will be mapping symbols to </span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>genes <span class="ot">&lt;-</span> rat_counts[,<span class="dv">1</span>]</span>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#import annotation file saved locally (Rattus_norvegicus.mRatBN7.2.113.gtf.gz from Ensembl) using rtracklayer</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>annotation_file <span class="ot">&lt;-</span> <span class="fu">import</span>(<span class="st">"annotation_file/Rattus_norvegicus.mRatBN7.2.113.gtf.gz"</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#get ensembl database that will be used to map ids to symbols</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>edb_rat <span class="ot">&lt;-</span> <span class="fu">AnnotationHub</span>()[[<span class="st">"AH116989"</span>]]</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#filter for entries containing gene</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>gene_map <span class="ot">&lt;-</span> annotation_file[annotation_file<span class="sc">$</span>type <span class="sc">==</span> <span class="st">"gene"</span>]</span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#query ensembl database object to get symbols that match ids</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>rat_gene_symbol <span class="ot">&lt;-</span> <span class="fu">mapIds</span>(edb_rat, <span class="at">keys =</span> genes, <span class="at">column =</span> <span class="st">"SYMBOL"</span>, <span class="at">keytype =</span> <span class="st">"GENEID"</span>, <span class="at">multiVals =</span> <span class="st">"first"</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#convert gene_map to df</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>gene_map_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(gene_map)</span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#create new column inside rat_counts dataframe called rat_gene_symbol</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>rat_counts<span class="sc">$</span>rat_gene_symbol <span class="ot">&lt;-</span> rat_gene_symbol</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">#assign unmapped cells NA</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>rat_counts<span class="sc">$</span>rat_gene_symbol[rat_counts<span class="sc">$</span>rat_gene_symbol <span class="sc">==</span> <span class="st">""</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co">#rearrange the newly added rat_gene_symbol column to be second in line</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>cols <span class="ot">&lt;-</span> <span class="fu">names</span>(rat_counts)</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>rat_counts <span class="ot">&lt;-</span> rat_counts[, <span class="fu">c</span>(cols[<span class="dv">1</span>], <span class="st">"rat_gene_symbol"</span>, <span class="fu">setdiff</span>(cols[<span class="sc">-</span><span class="dv">1</span>], <span class="st">"rat_gene_symbol"</span>))]</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#pipe that takes gene_map df keeps all gene names that are not NA, selects gene_id and gene_name, checks for distinct rows, and renames gene_name to rat_gene_symbol</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>gene_map_df <span class="ot">&lt;-</span> gene_map_df <span class="sc">|&gt;</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(gene_map_df<span class="sc">$</span>gene_name)) <span class="sc">|&gt;</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(gene_id, gene_name) <span class="sc">|&gt;</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">distinct</span>() <span class="sc">|&gt;</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename</span>(<span class="at">rat_gene_symbol =</span> gene_name)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co">#join rat counts and gene map by gene ids</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>rat_counts <span class="ot">&lt;-</span> <span class="fu">left_join</span>(rat_counts, gene_map_df, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"rat_gene_id"</span> <span class="ot">=</span> <span class="st">"gene_id"</span>))</span>
 <span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co">#view merged counts df with gene symbols</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(rat_counts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co">#rearrange the newly added rat_gene_symbol column to be second in line</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>cols <span class="ot">&lt;-</span> <span class="fu">names</span>(rat_counts)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>rat_counts <span class="ot">&lt;-</span> rat_counts[, <span class="fu">c</span>(cols[<span class="dv">1</span>], <span class="st">"rat_gene_symbol"</span>, <span class="fu">setdiff</span>(cols[<span class="sc">-</span><span class="dv">1</span>], <span class="st">"rat_gene_symbol"</span>))]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 30,562
-Columns: 11
-$ rat_gene_id     &lt;chr&gt; "ENSRNOG00000066169", "ENSRNOG00000070168", "ENSRNOG00…
-$ rat_gene_symbol &lt;chr&gt; NA, "Or51f23c-ps1", "Irgq", "Doc2g", "Ceacam16", "LOC1…
-$ LHNS1           &lt;int&gt; 1, 0, 813, 7, 0, 0, 107, 0, 0, 6, 0, 0, 0, 101, 52, 20…
-$ LHNS2           &lt;int&gt; 0, 0, 431, 3, 0, 0, 95, 0, 0, 2, 0, 0, 0, 84, 45, 1187…
-$ LHNS3           &lt;int&gt; 1, 0, 539, 0, 0, 0, 156, 0, 0, 0, 0, 0, 0, 85, 52, 127…
-$ IGFNS1          &lt;int&gt; 0, 0, 1089, 5, 0, 0, 103, 0, 0, 4, 0, 0, 0, 161, 93, 2…
-$ IGFNS2          &lt;int&gt; 0, 0, 537, 9, 0, 0, 46, 0, 0, 8, 0, 0, 0, 105, 64, 113…
-$ IGFNS3          &lt;int&gt; 0, 0, 925, 8, 0, 0, 92, 0, 0, 6, 0, 0, 0, 130, 73, 215…
-$ PDGFNS1         &lt;int&gt; 0, 0, 679, 4, 0, 0, 69, 0, 0, 6, 0, 0, 0, 110, 68, 155…
-$ PDGFNS2         &lt;int&gt; 1, 0, 1207, 14, 0, 0, 177, 0, 0, 5, 0, 0, 0, 199, 105,…
-$ PDGFNS3         &lt;int&gt; 1, 0, 966, 8, 0, 0, 140, 0, 0, 6, 0, 0, 0, 170, 83, 23…</code></pre>
-</div>
 </div>
 </section>
 <section id="visualize-symbol-mapping-efficiency" class="level4">
 <h4 class="anchored" data-anchor-id="visualize-symbol-mapping-efficiency">Visualize Symbol Mapping Efficiency</h4>
+<p>We now have mapped gene symbols to gene IDs, but how efficient was our mapping? Here we will visualize mapping efficiency with a pie chart.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#determine how many gene symbols mapped versus did not map</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#analyze mapped v. not mapped</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>mapped_count <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(rat_counts<span class="sc">$</span>rat_gene_symbol)) </span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>unmapped_count <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(rat_counts<span class="sc">$</span>rat_gene_symbol))</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">#make mapping summary</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>mapping_summary <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Mapped"</span> <span class="ot">=</span> mapped_count, <span class="st">"Unmapped"</span> <span class="ot">=</span> unmapped_count)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">#make a data.frame</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>mapping_summary <span class="ot">&lt;-</span> <span class="fu">enframe</span>(mapping_summary, <span class="at">name =</span> <span class="st">"Status"</span>, <span class="at">value =</span> <span class="st">"Count"</span>)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co">#add percentages</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>mapping_summary <span class="ot">&lt;-</span> mapping_summary <span class="sc">|&gt;</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>   <span class="fu">mutate</span>(<span class="at">Percent =</span> <span class="fu">round</span>(Count <span class="sc">/</span> <span class="fu">sum</span>(Count) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">1</span>), <span class="at">Label =</span> <span class="fu">str_c</span>(Percent, <span class="st">"%"</span>))</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co">#view df</span></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mapping_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#determine how many gene symbols mapped versus did not map</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#analyze mapped v. not mapped</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>mapped_count <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(rat_counts<span class="sc">$</span>rat_gene_symbol)) </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>unmapped_count <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(rat_counts<span class="sc">$</span>rat_gene_symbol))</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#make mapping summary</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>mapping_summary <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Mapped"</span> <span class="ot">=</span> mapped_count, <span class="st">"Unmapped"</span> <span class="ot">=</span> unmapped_count)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">#make a data.frame</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>mapping_summary <span class="ot">&lt;-</span> <span class="fu">enframe</span>(mapping_summary, <span class="at">name =</span> <span class="st">"Status"</span>, <span class="at">value =</span> <span class="st">"Count"</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">#add percentages</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>mapping_summary <span class="ot">&lt;-</span> mapping_summary <span class="sc">|&gt;</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>   <span class="fu">mutate</span>(<span class="at">Percent =</span> <span class="fu">round</span>(Count <span class="sc">/</span> <span class="fu">sum</span>(Count) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">1</span>), <span class="at">Label =</span> <span class="fu">str_c</span>(Percent, <span class="st">"%"</span>))</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co">#view df</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mapping_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 4
   Status   Count Percent Label
   &lt;chr&gt;    &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;
-1 Mapped   26195    85.7 85.7%
-2 Unmapped  4367    14.3 14.3%</code></pre>
+1 Mapped   26182    85.7 85.7%
+2 Unmapped  4380    14.3 14.3%</code></pre>
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#visualize</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mapping_summary, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> Count, <span class="at">fill =</span> Status)) <span class="sc">+</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">width =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">"y"</span>) <span class="sc">+</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> Label), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.45</span>), <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Mapping Summary"</span>) <span class="sc">+</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Mapped"</span> <span class="ot">=</span> <span class="st">"plum3"</span>, <span class="st">"Unmapped"</span> <span class="ot">=</span> <span class="st">"gray65"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#visualize</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mapping_summary, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> Count, <span class="at">fill =</span> Status)) <span class="sc">+</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">width =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">"y"</span>) <span class="sc">+</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> Label), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.45</span>), <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Mapping Summary"</span>) <span class="sc">+</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Mapped"</span> <span class="ot">=</span> <span class="st">"plum3"</span>, <span class="st">"Unmapped"</span> <span class="ot">=</span> <span class="st">"gray65"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -489,66 +483,78 @@ $ PDGFNS3         &lt;int&gt; 1, 0, 966, 8, 0, 0, 140, 0, 0, 6, 0, 0, 0, 170, 83
 </div>
 </div>
 <p><strong>Figure 2:</strong> Pie chart displaying the proportion of gene symbols that successfully mapped to gene IDs (purple) and gene symbols that did not map to gene IDs (grey).</p>
+<p>Notice that our mapping was not 100% efficient. That’s okay, not every Ensembl ID has a gene symbol that maps to it! However, our percentage of mapped symbols was quite high, so we can move with analysis.</p>
 </section>
 </section>
 <section id="save-merged-counts-file" class="level3">
 <h3 class="anchored" data-anchor-id="save-merged-counts-file">Save Merged Counts File</h3>
 <section id="save" class="level4">
 <h4 class="anchored" data-anchor-id="save">Save</h4>
+<p>Here we will save out our counts file to an output_files folder.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(rat_counts, <span class="at">file =</span> <span class="st">"output_files/counts.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(rat_counts, <span class="at">file =</span> <span class="st">"output_files/counts.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 </section>
-<section id="deseq" class="level3">
-<h3 class="anchored" data-anchor-id="deseq">DESeq</h3>
-<section id="make-metadata-for-deseq" class="level4">
-<h4 class="anchored" data-anchor-id="make-metadata-for-deseq">Make Metadata for DESeq</h4>
+<section id="deseq2" class="level3">
+<h3 class="anchored" data-anchor-id="deseq2">DESeq2</h3>
+<p>Currently, we only have a data frame with counts data. Counts data tells us the number of sequence reads that align to a particular gene for each sample. We do not know if our genes were differentially expressed across groups. DESeq2 is a package in R that is used to identify differentially expressed genes using our counts data.</p>
+<section id="make-metadata-for-deseq2" class="level4">
+<h4 class="anchored" data-anchor-id="make-metadata-for-deseq2">Make Metadata for DESeq2</h4>
+<p>Here, we will make a metadata data frame which is required for DESeq2. The metadata contains sample names in rows. It has one condition column and each cell contains the condition the sample maps to. For example, in my dataset I have nine samples with three conditions: LH, IGF, and PDGF. We will also define our reference level which is the baseline for comparison (LH).</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#make a character vector of sample names</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>samples <span class="ot">&lt;-</span> <span class="fu">colnames</span>(rat_counts[, <span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)])</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#make a factor vector of conditions</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>conditions <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"LH"</span>, <span class="dv">3</span>), <span class="fu">rep</span>(<span class="st">"IGF"</span>, <span class="dv">3</span>), <span class="fu">rep</span>(<span class="st">"PDGF"</span>, <span class="dv">3</span>)), <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"LH"</span>, <span class="st">"IGF"</span>, <span class="st">"PDGF"</span>))</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">#make metadata data.frame</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>metadata <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">condition =</span> conditions, <span class="at">row.names =</span> samples)</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co">#define reference level (helps for comparisons like in DESeq)</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>metadata<span class="sc">$</span>condition <span class="ot">&lt;-</span> <span class="fu">relevel</span>(metadata<span class="sc">$</span>condition, <span class="at">ref =</span> <span class="st">"LH"</span>)</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(metadata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#make a character vector of sample names</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>samples <span class="ot">&lt;-</span> <span class="fu">colnames</span>(rat_counts[, <span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)])</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#make a factor vector of conditions</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>conditions <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"LH"</span>, <span class="dv">3</span>), <span class="fu">rep</span>(<span class="st">"IGF"</span>, <span class="dv">3</span>), <span class="fu">rep</span>(<span class="st">"PDGF"</span>, <span class="dv">3</span>)), <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"LH"</span>, <span class="st">"IGF"</span>, <span class="st">"PDGF"</span>))</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co">#make metadata data.frame</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>metadata <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">condition =</span> conditions, <span class="at">row.names =</span> samples)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co">#define reference level (helps for comparisons like in DESeq)</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>metadata<span class="sc">$</span>condition <span class="ot">&lt;-</span> <span class="fu">relevel</span>(metadata<span class="sc">$</span>condition, <span class="at">ref =</span> <span class="st">"LH"</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(metadata, <span class="dv">9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Rows: 9
-Columns: 1
-$ condition &lt;fct&gt; LH, LH, LH, IGF, IGF, IGF, PDGF, PDGF, PDGF</code></pre>
+<pre><code>        condition
+LHNS1          LH
+LHNS2          LH
+LHNS3          LH
+IGFNS1        IGF
+IGFNS2        IGF
+IGFNS3        IGF
+PDGFNS1      PDGF
+PDGFNS2      PDGF
+PDGFNS3      PDGF</code></pre>
 </div>
 </div>
 </section>
-<section id="make-count-matrix-for-deseq" class="level4">
-<h4 class="anchored" data-anchor-id="make-count-matrix-for-deseq">Make Count Matrix for DESeq</h4>
+<section id="make-count-matrix-for-deseq2" class="level4">
+<h4 class="anchored" data-anchor-id="make-count-matrix-for-deseq2">Make Count Matrix for DESeq2</h4>
+<p>We have already generated a count matrix previously, but there are specific requirements for the count matrix needed to run DESeq2. we will generate a count matrix with gene IDs as row names and samples as column names. Each cell will contain the associated count data.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#get counts for each sample</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>countMat <span class="ot">&lt;-</span> rat_counts[, <span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)]  </span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">#assign rat_gene_ids as row names</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(countMat) <span class="ot">&lt;-</span> rat_counts<span class="sc">$</span>rat_gene_id </span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co">#convert to matrix</span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>countMat <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(countMat)  </span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(countMat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#get counts for each sample</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>countMat <span class="ot">&lt;-</span> rat_counts[, <span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)]  </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co">#assign rat_gene_ids as row names</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(countMat) <span class="ot">&lt;-</span> rat_counts<span class="sc">$</span>rat_gene_id </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co">#convert to matrix</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>countMat <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(countMat)  </span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(countMat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>                   LHNS1 LHNS2 LHNS3 IGFNS1 IGFNS2 IGFNS3 PDGFNS1 PDGFNS2
@@ -568,24 +574,25 @@ ENSRNOG00000055342       0</code></pre>
 </div>
 </div>
 </section>
-<section id="make-deseq-dataset" class="level4">
-<h4 class="anchored" data-anchor-id="make-deseq-dataset">Make DESeq Dataset</h4>
+<section id="make-deseq2-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="make-deseq2-dataset">Make DESeq2 Dataset</h4>
+<p>Now that we have metadata and a count matrix, we will make a DESeq2 dataset that will store both of these items. We will also specify that we are looking at gene expression based on a “condition” factor (found in our metadata). After making the dataset, we will re-add in mapped gene symbols so that they stay associated with the DESeq2 dataset.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#make DESeq dataset</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dds <span class="ot">&lt;-</span> <span class="fu">DESeqDataSetFromMatrix</span>(<span class="at">countData =</span> countMat, <span class="at">colData =</span> metadata, <span class="at">design =</span> <span class="sc">~</span> condition)</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co">#re-add in gene symbols</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>gene_symbols <span class="ot">&lt;-</span> rat_counts <span class="sc">|&gt;</span> </span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(rat_gene_id, rat_gene_symbol) <span class="sc">|&gt;</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(gene_symbols) <span class="ot">&lt;-</span> gene_symbols<span class="sc">$</span>rat_gene_id</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>gene_symbols <span class="ot">&lt;-</span> gene_symbols[, <span class="st">"rat_gene_symbol"</span>, drop <span class="ot">=</span> <span class="cn">FALSE</span>]</span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="fu">mcols</span>(dds)<span class="sc">$</span>rat_gene_symbol <span class="ot">&lt;-</span> gene_symbols<span class="sc">$</span>rat_gene_symbol[<span class="fu">match</span>(<span class="fu">rownames</span>(dds), <span class="fu">rownames</span>(gene_symbols))]</span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#make DESeq dataset</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>dds <span class="ot">&lt;-</span> <span class="fu">DESeqDataSetFromMatrix</span>(<span class="at">countData =</span> countMat, <span class="at">colData =</span> metadata, <span class="at">design =</span> <span class="sc">~</span> condition)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co">#re-add in gene symbols</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>gene_symbols <span class="ot">&lt;-</span> rat_counts <span class="sc">|&gt;</span> </span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(rat_gene_id, rat_gene_symbol) <span class="sc">|&gt;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(gene_symbols) <span class="ot">&lt;-</span> gene_symbols<span class="sc">$</span>rat_gene_id</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>gene_symbols <span class="ot">&lt;-</span> gene_symbols[, <span class="st">"rat_gene_symbol"</span>, drop <span class="ot">=</span> <span class="cn">FALSE</span>]</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="fu">mcols</span>(dds)<span class="sc">$</span>rat_gene_symbol <span class="ot">&lt;-</span> gene_symbols<span class="sc">$</span>rat_gene_symbol[<span class="fu">match</span>(<span class="fu">rownames</span>(dds), <span class="fu">rownames</span>(gene_symbols))]</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>class: DESeqDataSet 
@@ -602,11 +609,12 @@ colData names(1): condition</code></pre>
 </section>
 <section id="perform-deseq" class="level4">
 <h4 class="anchored" data-anchor-id="perform-deseq">Perform DESeq</h4>
+<p>Finally, we will run DESeq on our DESeq2 dataset. We will then view the results.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>dds <span class="ot">&lt;-</span> <span class="fu">DESeq</span>(dds)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">resultsNames</span>(dds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>dds <span class="ot">&lt;-</span> <span class="fu">DESeq</span>(dds)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">resultsNames</span>(dds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Intercept"            "condition_IGF_vs_LH"  "condition_PDGF_vs_LH"</code></pre>
@@ -615,11 +623,12 @@ colData names(1): condition</code></pre>
 </section>
 <section id="extract-differentially-expressed-genes-igf-v.-control" class="level4">
 <h4 class="anchored" data-anchor-id="extract-differentially-expressed-genes-igf-v.-control">Extract Differentially Expressed Genes (IGF v. Control)</h4>
+<p>We can see that IGF v. LH were compared, but now we need to extract the differential expression data into a dataframe for this comparison. After some manipulation, we will have a data frame containing columns like rat gene name and gene symbol and columns with different metrics of differential expression data (i.e.&nbsp;log2FoldChange, adjusted p-value, etc.). This will be used in our volcano plot analysis later on.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#summary of DEGs</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">results</span>(dds, <span class="at">contrast=</span><span class="fu">c</span>(<span class="st">"condition"</span>,<span class="st">"IGF"</span>,<span class="st">"LH"</span>), <span class="at">alpha=</span><span class="fl">0.05</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#summary of DEGs</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">results</span>(dds, <span class="at">contrast=</span><span class="fu">c</span>(<span class="st">"condition"</span>,<span class="st">"IGF"</span>,<span class="st">"LH"</span>), <span class="at">alpha=</span><span class="fl">0.05</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -635,31 +644,31 @@ low counts [2]     : 5625, 27%
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save DEGs</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co">#extract results for IGF vs LH as a regular data.frame</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>resIGF <span class="ot">&lt;-</span> <span class="fu">results</span>(dds, <span class="at">contrast =</span> <span class="fu">c</span>(<span class="st">"condition"</span>,<span class="st">"IGF"</span>,<span class="st">"LH"</span>))</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>resIGFDF <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(resIGF)</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co">#add gene_id from the row names</span></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>resIGFDF<span class="sc">$</span>rat_gene_id <span class="ot">&lt;-</span> <span class="fu">rownames</span>(resIGFDF)</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="co">#add the symbol column from rowData(dds)</span></span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>resIGFDF<span class="sc">$</span>rat_gene_symbol <span class="ot">&lt;-</span> <span class="fu">mcols</span>(dds)<span class="sc">$</span>rat_gene_symbol</span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="co">#reorder to: symbol, gene_id, baseMean, log2FC, lfcSE, stat, pvalue, padj</span></span>
-<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>resIGFDF <span class="ot">&lt;-</span> resIGFDF[, <span class="fu">c</span>(<span class="st">"rat_gene_id"</span>,<span class="st">"rat_gene_symbol"</span>,<span class="st">"baseMean"</span>,<span class="st">"log2FoldChange"</span>,<span class="st">"lfcSE"</span>,<span class="st">"stat"</span>,<span class="st">"pvalue"</span>,<span class="st">"padj"</span>)]</span>
-<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a><span class="co">#clear rownames</span></span>
-<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(resIGFDF) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
-<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(resIGFDF)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save DEGs</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co">#extract results for IGF vs LH as a regular data.frame</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>resIGF <span class="ot">&lt;-</span> <span class="fu">results</span>(dds, <span class="at">contrast =</span> <span class="fu">c</span>(<span class="st">"condition"</span>,<span class="st">"IGF"</span>,<span class="st">"LH"</span>))</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>resIGFDF <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(resIGF)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="co">#add gene_id from the row names</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>resIGFDF<span class="sc">$</span>rat_gene_id <span class="ot">&lt;-</span> <span class="fu">rownames</span>(resIGFDF)</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="co">#add the symbol column from rowData(dds)</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>resIGFDF<span class="sc">$</span>rat_gene_symbol <span class="ot">&lt;-</span> <span class="fu">mcols</span>(dds)<span class="sc">$</span>rat_gene_symbol</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="co">#reorder to: symbol, gene_id, baseMean, log2FC, lfcSE, stat, pvalue, padj</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>resIGFDF <span class="ot">&lt;-</span> resIGFDF[, <span class="fu">c</span>(<span class="st">"rat_gene_id"</span>,<span class="st">"rat_gene_symbol"</span>,<span class="st">"baseMean"</span>,<span class="st">"log2FoldChange"</span>,<span class="st">"lfcSE"</span>,<span class="st">"stat"</span>,<span class="st">"pvalue"</span>,<span class="st">"padj"</span>)]</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="co">#clear rownames</span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(resIGFDF) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(resIGFDF)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 30,562
 Columns: 8
 $ rat_gene_id     &lt;chr&gt; "ENSRNOG00000066169", "ENSRNOG00000070168", "ENSRNOG00…
-$ rat_gene_symbol &lt;chr&gt; NA, "Or51f23c-ps1", "Irgq", "Doc2g", "Ceacam16", "LOC1…
+$ rat_gene_symbol &lt;chr&gt; NA, "Or51f23c", "Irgq", "Doc2g", "Ceacam16", "LOC12010…
 $ baseMean        &lt;dbl&gt; 0.4219285, 0.0000000, 754.6358198, 5.9886733, 0.000000…
 $ log2FoldChange  &lt;dbl&gt; -2.22523841, NA, 0.04658425, 0.82434700, NA, NA, -1.10…
 $ lfcSE           &lt;dbl&gt; 2.7411566, NA, 0.1367222, 0.8725030, NA, NA, 0.2827141…
@@ -671,21 +680,23 @@ $ padj            &lt;dbl&gt; NA, NA, 8.593717e-01, 5.553376e-01, NA, NA, 8.6110
 </section>
 <section id="save-differentially-expressed-genes-igf-v.-control" class="level4">
 <h4 class="anchored" data-anchor-id="save-differentially-expressed-genes-igf-v.-control">Save Differentially Expressed Genes (IGF v. Control)</h4>
+<p>Here, we will save our data frame containing DESeq2 results for the IGF v. LH comparison.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#write out to a CSV</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(resIGFDF, <span class="at">file =</span> <span class="st">"output_files/DEGs_IGF_vs_LH_AllGenes.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>, <span class="at">quote =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#write out to a CSV</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(resIGFDF, <span class="at">file =</span> <span class="st">"output_files/DEGs_IGF_vs_LH_AllGenes.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>, <span class="at">quote =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 <section id="extract-differentially-expressed-genes-pdgf-v.-control" class="level4">
 <h4 class="anchored" data-anchor-id="extract-differentially-expressed-genes-pdgf-v.-control">Extract Differentially Expressed Genes (PDGF v. Control)</h4>
+<p>We can also see that PDGF v. LH were compared, but we also need to extract the differential expression data into a dataframe for this comparison. After some manipulation, we will have a data frame containing columns like rat gene name and gene symbol and columns with different metrics of differential expression data (i.e.&nbsp;log2FoldChange, adjusted p-value, etc.). This will be used in our volcano plot analysis later on.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#summary of DEGs</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">results</span>(dds, <span class="at">contrast=</span><span class="fu">c</span>(<span class="st">"condition"</span>,<span class="st">"PDGF"</span>,<span class="st">"LH"</span>), <span class="at">alpha=</span><span class="fl">0.05</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#summary of DEGs</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">results</span>(dds, <span class="at">contrast=</span><span class="fu">c</span>(<span class="st">"condition"</span>,<span class="st">"PDGF"</span>,<span class="st">"LH"</span>), <span class="at">alpha=</span><span class="fl">0.05</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -701,31 +712,31 @@ low counts [2]     : 5223, 25%
 </div>
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save DEGs</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co">#extract results for IGF vs LH as a regular data.frame</span></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>resPDGF <span class="ot">&lt;-</span> <span class="fu">results</span>(dds, <span class="at">contrast =</span> <span class="fu">c</span>(<span class="st">"condition"</span>,<span class="st">"PDGF"</span>,<span class="st">"LH"</span>))</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>resPDGFDF <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(resPDGF)</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="co">#add gene_id from the row names</span></span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>resPDGFDF<span class="sc">$</span>rat_gene_id <span class="ot">&lt;-</span> <span class="fu">rownames</span>(resPDGFDF)</span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="co">#add the symbol column from rowData(dds)</span></span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>resPDGFDF<span class="sc">$</span>rat_gene_symbol <span class="ot">&lt;-</span> <span class="fu">mcols</span>(dds)<span class="sc">$</span>rat_gene_symbol</span>
-<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="co">#reorder to: symbol, gene_id, baseMean, log2FC, lfcSE, stat, pvalue, padj</span></span>
-<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>resPDGFDF <span class="ot">&lt;-</span> resPDGFDF[, <span class="fu">c</span>(<span class="st">"rat_gene_id"</span>,<span class="st">"rat_gene_symbol"</span>,<span class="st">"baseMean"</span>,<span class="st">"log2FoldChange"</span>,<span class="st">"lfcSE"</span>,<span class="st">"stat"</span>,<span class="st">"pvalue"</span>,<span class="st">"padj"</span>)]</span>
-<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a><span class="co">#clear rownames</span></span>
-<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(resPDGFDF) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
-<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(resPDGFDF)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save DEGs</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co">#extract results for IGF vs LH as a regular data.frame</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>resPDGF <span class="ot">&lt;-</span> <span class="fu">results</span>(dds, <span class="at">contrast =</span> <span class="fu">c</span>(<span class="st">"condition"</span>,<span class="st">"PDGF"</span>,<span class="st">"LH"</span>))</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>resPDGFDF <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(resPDGF)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co">#add gene_id from the row names</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>resPDGFDF<span class="sc">$</span>rat_gene_id <span class="ot">&lt;-</span> <span class="fu">rownames</span>(resPDGFDF)</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="co">#add the symbol column from rowData(dds)</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>resPDGFDF<span class="sc">$</span>rat_gene_symbol <span class="ot">&lt;-</span> <span class="fu">mcols</span>(dds)<span class="sc">$</span>rat_gene_symbol</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="co">#reorder to: symbol, gene_id, baseMean, log2FC, lfcSE, stat, pvalue, padj</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>resPDGFDF <span class="ot">&lt;-</span> resPDGFDF[, <span class="fu">c</span>(<span class="st">"rat_gene_id"</span>,<span class="st">"rat_gene_symbol"</span>,<span class="st">"baseMean"</span>,<span class="st">"log2FoldChange"</span>,<span class="st">"lfcSE"</span>,<span class="st">"stat"</span>,<span class="st">"pvalue"</span>,<span class="st">"padj"</span>)]</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="co">#clear rownames</span></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(resPDGFDF) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(resPDGFDF)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 30,562
 Columns: 8
 $ rat_gene_id     &lt;chr&gt; "ENSRNOG00000066169", "ENSRNOG00000070168", "ENSRNOG00…
-$ rat_gene_symbol &lt;chr&gt; NA, "Or51f23c-ps1", "Irgq", "Doc2g", "Ceacam16", "LOC1…
+$ rat_gene_symbol &lt;chr&gt; NA, "Or51f23c", "Irgq", "Doc2g", "Ceacam16", "LOC12010…
 $ baseMean        &lt;dbl&gt; 0.4219285, 0.0000000, 754.6358198, 5.9886733, 0.000000…
 $ log2FoldChange  &lt;dbl&gt; -0.712655529, NA, -0.002314038, 0.689019503, NA, NA, -…
 $ lfcSE           &lt;dbl&gt; 2.6903036, NA, 0.1363147, 0.8689066, NA, NA, 0.2764881…
@@ -737,32 +748,34 @@ $ padj            &lt;dbl&gt; NA, NA, 9.925101e-01, 6.015807e-01, NA, NA, 5.4356
 </section>
 <section id="save-differentially-expressed-genes-pdgf-v.-control" class="level4">
 <h4 class="anchored" data-anchor-id="save-differentially-expressed-genes-pdgf-v.-control">Save Differentially Expressed Genes (PDGF v. Control)</h4>
+<p>Here, we will save our data frame containing DESeq2 results for the PDGF v. LH comparison.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#write out to a CSV</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(resPDGFDF, <span class="at">file =</span> <span class="st">"output_files/DEGs_PDGF_vs_LH_AllGenes.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>, <span class="at">quote =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">#write out to a CSV</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(resPDGFDF, <span class="at">file =</span> <span class="st">"output_files/DEGs_PDGF_vs_LH_AllGenes.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>, <span class="at">quote =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
-<section id="make-merged-data-frame-of-deseq-results" class="level4">
-<h4 class="anchored" data-anchor-id="make-merged-data-frame-of-deseq-results">Make Merged Data Frame of DESeq Results</h4>
+<section id="make-merged-data-frame-of-deseq2-results" class="level4">
+<h4 class="anchored" data-anchor-id="make-merged-data-frame-of-deseq2-results">Make Merged Data Frame of DESeq2 Results</h4>
+<p>Finally, we will want to make a merged data frame that contains a column for gene IDs, a column for gene_symbols, and all associated differential expression data for both comparisons (IGF v. LH and PDGF v. LH). We will use this later on for linear regression analysis.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co">#i will use this for linear regression analysis later on</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="co">#make merged data frame that only keeps gene ids and symbols from one results file and keeps all results columns from both columns</span></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>res_deseq_df <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">as.data.frame</span>(resPDGFDF[,<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>)]),<span class="fu">as.data.frame</span>(resIGFDF[,<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>)]), <span class="at">by=</span><span class="st">"row.names"</span>, <span class="at">all.x =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="co">#rename columns</span></span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(res_deseq_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"row_names"</span>, <span class="st">"rat_gene_id"</span>, <span class="st">"rat_gene_symbol"</span>, <span class="st">"baseMean"</span>, <span class="st">"log2FC_PDGF"</span>, <span class="st">"lfcSE_PDGF"</span>, <span class="st">"stat_PDGF"</span>, <span class="st">"pval_PDGF"</span>, <span class="st">"padj_PDGF"</span>, <span class="st">"log2FC_IGF"</span>, <span class="st">"lfcSE_IGF"</span>, <span class="st">"stat_IGF"</span>, <span class="st">"pval_IGF"</span>, <span class="st">"padj_IGF"</span>)</span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="co">#drop rownames column</span></span>
-<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>res_deseq_df <span class="ot">&lt;-</span> res_deseq_df <span class="sc">|&gt;</span></span>
-<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>row_names)</span>
-<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
-<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(res_deseq_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#i will use this for linear regression analysis later on</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="co">#make merged data frame that only keeps gene ids and symbols from one results file and keeps all results columns from both columns</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>res_deseq_df <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">as.data.frame</span>(resPDGFDF[,<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>)]),<span class="fu">as.data.frame</span>(resIGFDF[,<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>)]), <span class="at">by=</span><span class="st">"row.names"</span>, <span class="at">all.x =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co">#rename columns</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(res_deseq_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"row_names"</span>, <span class="st">"rat_gene_id"</span>, <span class="st">"rat_gene_symbol"</span>, <span class="st">"baseMean"</span>, <span class="st">"log2FC_PDGF"</span>, <span class="st">"lfcSE_PDGF"</span>, <span class="st">"stat_PDGF"</span>, <span class="st">"pval_PDGF"</span>, <span class="st">"padj_PDGF"</span>, <span class="st">"log2FC_IGF"</span>, <span class="st">"lfcSE_IGF"</span>, <span class="st">"stat_IGF"</span>, <span class="st">"pval_IGF"</span>, <span class="st">"padj_IGF"</span>)</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="co">#drop rownames column</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>res_deseq_df <span class="ot">&lt;-</span> res_deseq_df <span class="sc">|&gt;</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>row_names)</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(res_deseq_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 30,562
@@ -783,13 +796,14 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621612, NA, 0.1273136, NA, NA, NA, NA, NA, 
 </div>
 </div>
 </section>
-<section id="save-merged-data-frame-of-deseq-results" class="level4">
-<h4 class="anchored" data-anchor-id="save-merged-data-frame-of-deseq-results">Save Merged Data Frame of DESeq Results</h4>
+<section id="save-merged-data-frame-of-deseq2-results" class="level4">
+<h4 class="anchored" data-anchor-id="save-merged-data-frame-of-deseq2-results">Save Merged Data Frame of DESeq2 Results</h4>
+<p>Now we will save our merged data frame containing DESeq2 results for both comparisons.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">#write out to a CSV</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(res_deseq_df, <span class="at">file =</span> <span class="st">"output_files/DEGs_PDGF_vs_LH_IGF_vs_LH_AllGenes.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>, <span class="at">quote =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">#write out to a CSV</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(res_deseq_df, <span class="at">file =</span> <span class="st">"output_files/DEGs_PDGF_vs_LH_IGF_vs_LH_AllGenes.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>, <span class="at">quote =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -797,46 +811,49 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621612, NA, 0.1273136, NA, NA, NA, NA, NA, 
 </section>
 <section id="data-visualization" class="level2">
 <h2 class="anchored" data-anchor-id="data-visualization">Data Visualization</h2>
+<p>Now for the fun part, getting to see the changes in our data! This section will go over a few methods that can be used to visualize gene expression data.</p>
 <section id="principal-component-analysis-pca" class="level3">
 <h3 class="anchored" data-anchor-id="principal-component-analysis-pca">Principal Component Analysis (PCA)</h3>
-<section id="make-pca-plot-the-deseq-way" class="level4">
-<h4 class="anchored" data-anchor-id="make-pca-plot-the-deseq-way">Make PCA Plot (The DESeq Way)</h4>
+<p>Principal components analysis is a way to capture the variation in our gene expression data, allowing us to compare gene expression profiles across samples from our groups. This section will go over how to perform PCA analysis and plot principal components.</p>
+<section id="make-pca-plot-the-deseq2-way" class="level4">
+<h4 class="anchored" data-anchor-id="make-pca-plot-the-deseq2-way">Make PCA Plot (The DESeq2 Way)</h4>
+<p>In class, we learned to perform PCA with tidymodels, but DESeq2 has a built-in method for principal components analysis that will be used here. We will perform variance-stabilizing transformation on our dataset. Then, we will perform PCA and pull out a few factors into new objects that will be helpful for plotting. Finally, we will use ggplot2 to plot our first two principal components allowing us to analyze changes in gene expression profiles across samples.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">#perform PCA</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="co">#variance-stabilizing transformation</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>vsd <span class="ot">&lt;-</span> <span class="fu">vst</span>(dds, <span class="at">blind =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="co">#pull out grouping factor (condition)</span></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>groupingfactor <span class="ot">&lt;-</span> <span class="st">"condition"</span> </span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="co">#PCA data, % var</span></span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>pcaDat <span class="ot">&lt;-</span> <span class="fu">plotPCA</span>(vsd, <span class="at">intgroup =</span> groupingfactor, <span class="at">returnData =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>percentVar <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> <span class="fu">attr</span>(pcaDat, <span class="st">"percentVar"</span>))</span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a><span class="co">#make PCA plot</span></span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="co">#plot</span></span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pcaDat, <span class="fu">aes</span>(<span class="at">x =</span> .data[[<span class="st">"PC1"</span>]], <span class="at">y =</span> .data[[<span class="st">"PC2"</span>]], <span class="at">color =</span> .data[[groupingfactor]], <span class="at">shape =</span> .data[[groupingfactor]])) <span class="sc">+</span></span>
-<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span> </span>
-<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span> </span>
-<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">30</span>, <span class="dv">30</span>), <span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">30</span>, <span class="dv">30</span>), <span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>() <span class="sc">+</span></span>
-<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="dv">16</span>, <span class="dv">17</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
-<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cowplot</span>() <span class="sc">+</span></span>
-<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">linewidth =</span> <span class="dv">1</span>), <span class="at">axis.line =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"black"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>)) <span class="sc">+</span></span>
-<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Principal Component Analysis"</span>,</span>
-<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="fu">paste0</span>(<span class="st">"PC1: "</span>, percentVar[<span class="dv">1</span>], <span class="st">"% Variance"</span>),</span>
-<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="fu">paste0</span>(<span class="st">"PC2: "</span>, percentVar[<span class="dv">2</span>], <span class="st">"% Variance"</span>),</span>
-<span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Condition"</span>, <span class="at">shape =</span> <span class="st">"Condition"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">#perform PCA</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co">#variance-stabilizing transformation</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>vsd <span class="ot">&lt;-</span> <span class="fu">vst</span>(dds, <span class="at">blind =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="co">#pull out grouping factor (condition)</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>groupingfactor <span class="ot">&lt;-</span> <span class="st">"condition"</span> </span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a><span class="co">#PCA data, % var</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>pcaDat <span class="ot">&lt;-</span> <span class="fu">plotPCA</span>(vsd, <span class="at">intgroup =</span> groupingfactor, <span class="at">returnData =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>percentVar <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> <span class="fu">attr</span>(pcaDat, <span class="st">"percentVar"</span>))</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a><span class="co">#make PCA plot</span></span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a><span class="co">#plot</span></span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pcaDat, <span class="fu">aes</span>(<span class="at">x =</span> .data[[<span class="st">"PC1"</span>]], <span class="at">y =</span> .data[[<span class="st">"PC2"</span>]], <span class="at">color =</span> .data[[groupingfactor]], <span class="at">shape =</span> .data[[groupingfactor]])) <span class="sc">+</span></span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span> </span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span> </span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">30</span>, <span class="dv">30</span>), <span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">30</span>, <span class="dv">30</span>), <span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>() <span class="sc">+</span></span>
+<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_shape_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="dv">16</span>, <span class="dv">17</span>, <span class="dv">15</span>)) <span class="sc">+</span></span>
+<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cowplot</span>() <span class="sc">+</span></span>
+<span id="cb34-23"><a href="#cb34-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">linewidth =</span> <span class="dv">1</span>), <span class="at">axis.line =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb34-24"><a href="#cb34-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"black"</span>, <span class="st">"green"</span>, <span class="st">"blue"</span>)) <span class="sc">+</span></span>
+<span id="cb34-25"><a href="#cb34-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Principal Component Analysis"</span>,</span>
+<span id="cb34-26"><a href="#cb34-26" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="fu">paste0</span>(<span class="st">"PC1: "</span>, percentVar[<span class="dv">1</span>], <span class="st">"% Variance"</span>),</span>
+<span id="cb34-27"><a href="#cb34-27" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="fu">paste0</span>(<span class="st">"PC2: "</span>, percentVar[<span class="dv">2</span>], <span class="st">"% Variance"</span>),</span>
+<span id="cb34-28"><a href="#cb34-28" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Condition"</span>, <span class="at">shape =</span> <span class="st">"Condition"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Differential_Gene_Expression_Visualization_files/figure-html/Make PCA Plot (The DESeq Way)-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Differential_Gene_Expression_Visualization_files/figure-html/Make PCA Plot (The DESeq2 Way)-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -845,43 +862,46 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621612, NA, 0.1273136, NA, NA, NA, NA, NA, 
 </section>
 <section id="save-pca-plot" class="level4">
 <h4 class="anchored" data-anchor-id="save-pca-plot">Save PCA Plot</h4>
+<p>Here, we will save a .png of our PCA plot.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/pcaplot.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/pcaplot.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 </section>
 <section id="volcano-plots-igf-v.-control" class="level3">
 <h3 class="anchored" data-anchor-id="volcano-plots-igf-v.-control">Volcano Plots (IGF v. Control)</h3>
+<p>Another way to visualize differential expression data is through volcano plots. A volcano plot is a type of scatter plot that plots fold change on the x-axis and statistical significance on the y-axis. These are both metrics that we obtain from DESeq2 comparisons. We will plot both comparisons we made separately to determine genes that were significantly differentially expressed in IGF v. Control samples or PDGF v. Control Samples. Let’s explore the IGF v. Control comparison here.</p>
 <section id="basic-volcano-plot" class="level4">
 <h4 class="anchored" data-anchor-id="basic-volcano-plot">Basic Volcano Plot</h4>
+<p>Here, we will use ggplot2 to plot a basic volcano plot. We will use some sorting to differentially color significantly downregulated genes, significantly upregulated genes, and nonsignificantly differentially regulated genes. Significance cutoffs will be indicated by dashed lines.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">#IGF v. LH</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co">#set sig cutoffs</span></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>resIGFDF<span class="sc">$</span>diffexpressed <span class="ot">&lt;-</span> <span class="st">"NO"</span></span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>resIGFDF<span class="sc">$</span>diffexpressed[resIGFDF<span class="sc">$</span>log2FoldChange <span class="sc">&gt;</span> <span class="fl">0.585</span> <span class="sc">&amp;</span> resIGFDF<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"Upregulated"</span></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>resIGFDF<span class="sc">$</span>diffexpressed[resIGFDF<span class="sc">$</span>log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.585</span> <span class="sc">&amp;</span> resIGFDF<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"Downregulated"</span></span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="co">#make volcano plot</span></span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>vp1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> resIGFDF, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj), <span class="at">col =</span> diffexpressed)) <span class="sc">+</span></span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.585</span>, <span class="fl">0.585</span>), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">'dashed'</span>) <span class="sc">+</span></span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="sc">-</span><span class="fu">log10</span>(<span class="fl">0.05</span>), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">'dashed'</span>) <span class="sc">+</span></span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightblue2"</span>,<span class="st">"gray"</span>,<span class="st">"lightcoral"</span>),<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>,<span class="st">"Not Significant"</span>,<span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">150</span>), <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>)) <span class="sc">+</span></span>
-<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"IGF vs Control"</span>, <span class="at">x =</span> <span class="fu">expression</span>(<span class="st">"Log"</span>[<span class="dv">2</span>]<span class="sc">*</span><span class="st">"FC"</span>), <span class="at">y =</span> <span class="fu">expression</span>(<span class="st">"-log"</span>[<span class="dv">10</span>]<span class="sc">*</span><span class="st">"p-adj"</span>)) <span class="sc">+</span> </span>
-<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
-<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title.position =</span> <span class="st">"panel"</span>, <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>,<span class="at">hjust =</span> <span class="fl">0.5</span>), <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">5</span>))</span>
-<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
-<span id="cb37-21"><a href="#cb37-21" aria-hidden="true" tabindex="-1"></a>vp1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">#IGF v. LH</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="co">#set sig cutoffs</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>resIGFDF<span class="sc">$</span>diffexpressed <span class="ot">&lt;-</span> <span class="st">"NO"</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>resIGFDF<span class="sc">$</span>diffexpressed[resIGFDF<span class="sc">$</span>log2FoldChange <span class="sc">&gt;</span> <span class="fl">0.585</span> <span class="sc">&amp;</span> resIGFDF<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"Upregulated"</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>resIGFDF<span class="sc">$</span>diffexpressed[resIGFDF<span class="sc">$</span>log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.585</span> <span class="sc">&amp;</span> resIGFDF<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"Downregulated"</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="co">#make volcano plot</span></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>vp1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> resIGFDF, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj), <span class="at">col =</span> diffexpressed)) <span class="sc">+</span></span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.585</span>, <span class="fl">0.585</span>), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">'dashed'</span>) <span class="sc">+</span></span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="sc">-</span><span class="fu">log10</span>(<span class="fl">0.05</span>), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">'dashed'</span>) <span class="sc">+</span></span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightblue2"</span>,<span class="st">"gray"</span>,<span class="st">"lightcoral"</span>),<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>,<span class="st">"Not Significant"</span>,<span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">150</span>), <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>)) <span class="sc">+</span></span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"IGF vs Control"</span>, <span class="at">x =</span> <span class="fu">expression</span>(<span class="st">"Log"</span>[<span class="dv">2</span>]<span class="sc">*</span><span class="st">"FC"</span>), <span class="at">y =</span> <span class="fu">expression</span>(<span class="st">"-log"</span>[<span class="dv">10</span>]<span class="sc">*</span><span class="st">"p-adj"</span>)) <span class="sc">+</span> </span>
+<span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb36-16"><a href="#cb36-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb36-17"><a href="#cb36-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb36-18"><a href="#cb36-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title.position =</span> <span class="st">"panel"</span>, <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>,<span class="at">hjust =</span> <span class="fl">0.5</span>), <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">5</span>))</span>
+<span id="cb36-19"><a href="#cb36-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-20"><a href="#cb36-20" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
+<span id="cb36-21"><a href="#cb36-21" aria-hidden="true" tabindex="-1"></a>vp1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -895,21 +915,22 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621612, NA, 0.1273136, NA, NA, NA, NA, NA, 
 </section>
 <section id="volcano-plot-with-genes-of-interest-labeled" class="level4">
 <h4 class="anchored" data-anchor-id="volcano-plot-with-genes-of-interest-labeled">Volcano Plot with Genes of Interest Labeled</h4>
+<p>Now, we will take the generated volcano plot and label a few genes of interest. For example, I have added some genes important in phenotypic switch.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">#specify genes of interest</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>genes_to_label <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Mmp2"</span>, <span class="st">"Tagln"</span>, <span class="st">"Lgals3"</span>, <span class="st">"Cnn1"</span>, <span class="st">"Myocd"</span>, <span class="st">"Srf"</span>, <span class="st">"Mkl1"</span>)</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>label_df <span class="ot">&lt;-</span> <span class="fu">subset</span>(resIGFDF, rat_gene_symbol <span class="sc">%in%</span> genes_to_label)</span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="co">#label genes of interest</span></span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>vp1_labeled <span class="ot">&lt;-</span> vp1 <span class="sc">+</span> </span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data  =</span> label_df, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj)), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size  =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> label_df, <span class="fu">aes</span>(<span class="at">label  =</span> rat_gene_symbol), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">box.padding =</span> <span class="fl">0.2</span>, <span class="at">point.padding =</span> <span class="fl">0.1</span>)</span>
-<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
-<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>vp1_labeled</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">#specify genes of interest</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>genes_to_label <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Mmp2"</span>, <span class="st">"Tagln"</span>, <span class="st">"Lgals3"</span>, <span class="st">"Cnn1"</span>, <span class="st">"Myocd"</span>, <span class="st">"Srf"</span>, <span class="st">"Mkl1"</span>)</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>label_df <span class="ot">&lt;-</span> <span class="fu">subset</span>(resIGFDF, rat_gene_symbol <span class="sc">%in%</span> genes_to_label)</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="co">#label genes of interest</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>vp1_labeled <span class="ot">&lt;-</span> vp1 <span class="sc">+</span> </span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data  =</span> label_df, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj)), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size  =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> label_df, <span class="fu">aes</span>(<span class="at">label  =</span> rat_gene_symbol), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">box.padding =</span> <span class="fl">0.2</span>, <span class="at">point.padding =</span> <span class="fl">0.1</span>)</span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>vp1_labeled</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -923,23 +944,24 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621612, NA, 0.1273136, NA, NA, NA, NA, NA, 
 </section>
 <section id="volcano-plot-with-top-10-most-significant-genes-labeled" class="level4">
 <h4 class="anchored" data-anchor-id="volcano-plot-with-top-10-most-significant-genes-labeled">Volcano Plot with Top 10 Most Significant Genes Labeled</h4>
+<p>Finally, we will use some filtering to label our most significantly differentially regulated genes (top 10).</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">#filter top10 most significant genes</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>resIGFDF <span class="sc">|&gt;</span></span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="st">"gene"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(padj <span class="sc">&lt;</span> <span class="fl">0.05</span>) <span class="sc">|&gt;</span></span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_min</span>((<span class="at">order_by =</span> padj), <span class="at">n =</span> <span class="dv">10</span>) <span class="ot">-&gt;</span> top_genes_IGF</span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="co">#label volcano plot</span></span>
-<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>vp1_top10 <span class="ot">&lt;-</span> vp1 <span class="sc">+</span> </span>
-<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data  =</span> top_genes_IGF, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj)), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size  =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> top_genes_IGF, <span class="fu">aes</span>(<span class="at">label  =</span> rat_gene_symbol), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">box.padding =</span> <span class="fl">0.2</span>, <span class="at">point.padding =</span> <span class="fl">0.1</span>)</span>
-<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
-<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>vp1_top10</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">#filter top10 most significant genes</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>resIGFDF <span class="sc">|&gt;</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="st">"gene"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(padj <span class="sc">&lt;</span> <span class="fl">0.05</span>) <span class="sc">|&gt;</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_min</span>((<span class="at">order_by =</span> padj), <span class="at">n =</span> <span class="dv">10</span>) <span class="ot">-&gt;</span> top_genes_IGF</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="co">#label volcano plot</span></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>vp1_top10 <span class="ot">&lt;-</span> vp1 <span class="sc">+</span> </span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data  =</span> top_genes_IGF, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj)), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size  =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> top_genes_IGF, <span class="fu">aes</span>(<span class="at">label  =</span> rat_gene_symbol), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">box.padding =</span> <span class="fl">0.2</span>, <span class="at">point.padding =</span> <span class="fl">0.1</span>)</span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
+<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a>vp1_top10</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -953,45 +975,48 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621612, NA, 0.1273136, NA, NA, NA, NA, NA, 
 </section>
 <section id="save-volcano-plots" class="level4">
 <h4 class="anchored" data-anchor-id="save-volcano-plots">Save Volcano Plots</h4>
+<p>Here, we will save volcano plots created for the IGF v. Control condition.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/volcanoplotIGF.png"</span>, vp1)</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/volcanoplotIGFphenoswitchgenes.png"</span>, vp1_labeled)</span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/volcanoplotIGFtop10.png"</span>, vp1_top10)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/volcanoplotIGF.png"</span>, vp1)</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/volcanoplotIGFphenoswitchgenes.png"</span>, vp1_labeled)</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/volcanoplotIGFtop10.png"</span>, vp1_top10)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 </section>
 <section id="volcano-plots-pdgf-v.-control" class="level3">
 <h3 class="anchored" data-anchor-id="volcano-plots-pdgf-v.-control">Volcano Plots (PDGF v. Control)</h3>
+<p>Now, we will shift our attention and explore the PDGF v. Control comparison with the same plots.</p>
 <section id="basic-volcano-plot-1" class="level4">
 <h4 class="anchored" data-anchor-id="basic-volcano-plot-1">Basic Volcano Plot</h4>
+<p>Here, we will use ggplot2 to plot a basic volcano plot. We will use some sorting to differentially color significantly downregulated genes, significantly upregulated genes, and nonsignificantly differentially regulated genes. Significance cutoffs will be indicated by dashed lines.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">#PDGF v. LH</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="co">#set sig cutoffs</span></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>resPDGFDF<span class="sc">$</span>diffexpressed <span class="ot">&lt;-</span> <span class="st">"NO"</span></span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>resPDGFDF<span class="sc">$</span>diffexpressed[resPDGFDF<span class="sc">$</span>log2FoldChange <span class="sc">&gt;</span> <span class="fl">0.585</span> <span class="sc">&amp;</span> resPDGFDF<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"Upregulated"</span></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>resPDGFDF<span class="sc">$</span>diffexpressed[resPDGFDF<span class="sc">$</span>log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.585</span> <span class="sc">&amp;</span> resPDGFDF<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"Downregulated"</span></span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="co">#make volcano plot</span></span>
-<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>vp2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> resPDGFDF, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj), <span class="at">col =</span> diffexpressed)) <span class="sc">+</span></span>
-<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.585</span>, <span class="fl">0.585</span>), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">'dashed'</span>) <span class="sc">+</span></span>
-<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="sc">-</span><span class="fu">log10</span>(<span class="fl">0.05</span>), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">'dashed'</span>) <span class="sc">+</span></span>
-<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightblue2"</span>,<span class="st">"gray"</span>,<span class="st">"lightcoral"</span>),<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>,<span class="st">"Not Significant"</span>,<span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
-<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">150</span>), <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>)) <span class="sc">+</span></span>
-<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"PDGF vs Control"</span>, <span class="at">x =</span> <span class="fu">expression</span>(<span class="st">"Log"</span>[<span class="dv">2</span>]<span class="sc">*</span><span class="st">"FC"</span>), <span class="at">y =</span> <span class="fu">expression</span>(<span class="st">"-log"</span>[<span class="dv">10</span>]<span class="sc">*</span><span class="st">"p-adj"</span>)) <span class="sc">+</span> </span>
-<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
-<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title.position =</span> <span class="st">"panel"</span>, <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>,<span class="at">hjust =</span> <span class="fl">0.5</span>), <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">5</span>))</span>
-<span id="cb41-19"><a href="#cb41-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-20"><a href="#cb41-20" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
-<span id="cb41-21"><a href="#cb41-21" aria-hidden="true" tabindex="-1"></a>vp2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co">#PDGF v. LH</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="co">#set sig cutoffs</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>resPDGFDF<span class="sc">$</span>diffexpressed <span class="ot">&lt;-</span> <span class="st">"NO"</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>resPDGFDF<span class="sc">$</span>diffexpressed[resPDGFDF<span class="sc">$</span>log2FoldChange <span class="sc">&gt;</span> <span class="fl">0.585</span> <span class="sc">&amp;</span> resPDGFDF<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"Upregulated"</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>resPDGFDF<span class="sc">$</span>diffexpressed[resPDGFDF<span class="sc">$</span>log2FoldChange <span class="sc">&lt;</span> <span class="sc">-</span><span class="fl">0.585</span> <span class="sc">&amp;</span> resPDGFDF<span class="sc">$</span>padj <span class="sc">&lt;</span> <span class="fl">0.05</span>] <span class="ot">&lt;-</span> <span class="st">"Downregulated"</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="co">#make volcano plot</span></span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>vp2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> resPDGFDF, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj), <span class="at">col =</span> diffexpressed)) <span class="sc">+</span></span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.585</span>, <span class="fl">0.585</span>), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">'dashed'</span>) <span class="sc">+</span></span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="sc">-</span><span class="fu">log10</span>(<span class="fl">0.05</span>), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">'dashed'</span>) <span class="sc">+</span></span>
+<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"lightblue2"</span>,<span class="st">"gray"</span>,<span class="st">"lightcoral"</span>),<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Downregulated"</span>,<span class="st">"Not Significant"</span>,<span class="st">"Upregulated"</span>)) <span class="sc">+</span></span>
+<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">150</span>), <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>)) <span class="sc">+</span></span>
+<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"PDGF vs Control"</span>, <span class="at">x =</span> <span class="fu">expression</span>(<span class="st">"Log"</span>[<span class="dv">2</span>]<span class="sc">*</span><span class="st">"FC"</span>), <span class="at">y =</span> <span class="fu">expression</span>(<span class="st">"-log"</span>[<span class="dv">10</span>]<span class="sc">*</span><span class="st">"p-adj"</span>)) <span class="sc">+</span> </span>
+<span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb40-16"><a href="#cb40-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb40-17"><a href="#cb40-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb40-18"><a href="#cb40-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title.position =</span> <span class="st">"panel"</span>, <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>,<span class="at">hjust =</span> <span class="fl">0.5</span>), <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">5</span>))</span>
+<span id="cb40-19"><a href="#cb40-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-20"><a href="#cb40-20" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
+<span id="cb40-21"><a href="#cb40-21" aria-hidden="true" tabindex="-1"></a>vp2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -1005,21 +1030,22 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621612, NA, 0.1273136, NA, NA, NA, NA, NA, 
 </section>
 <section id="volcano-plot-with-genes-of-interest-labeled-1" class="level4">
 <h4 class="anchored" data-anchor-id="volcano-plot-with-genes-of-interest-labeled-1">Volcano Plot with Genes of Interest Labeled</h4>
+<p>Now, we will take the generated volcano plot and label a few genes of interest. For example, I have added some genes important in phenotypic switch.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co">#specify genes of interest</span></span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>genes_to_label <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Mmp2"</span>, <span class="st">"Tagln"</span>, <span class="st">"Lgals3"</span>, <span class="st">"Cnn1"</span>, <span class="st">"Myocd"</span>, <span class="st">"Srf"</span>, <span class="st">"Mkl1"</span>)</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>label_df <span class="ot">&lt;-</span> <span class="fu">subset</span>(resPDGFDF, rat_gene_symbol <span class="sc">%in%</span> genes_to_label)</span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="co">#label genes of interest</span></span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>vp2_labeled <span class="ot">&lt;-</span> vp2 <span class="sc">+</span> </span>
-<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data  =</span> label_df, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj)), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size  =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> label_df, <span class="fu">aes</span>(<span class="at">label  =</span> rat_gene_symbol), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">box.padding =</span> <span class="fl">0.2</span>, <span class="at">point.padding =</span> <span class="fl">0.1</span>)</span>
-<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
-<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>vp2_labeled</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">#specify genes of interest</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>genes_to_label <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Mmp2"</span>, <span class="st">"Tagln"</span>, <span class="st">"Lgals3"</span>, <span class="st">"Cnn1"</span>, <span class="st">"Myocd"</span>, <span class="st">"Srf"</span>, <span class="st">"Mkl1"</span>)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>label_df <span class="ot">&lt;-</span> <span class="fu">subset</span>(resPDGFDF, rat_gene_symbol <span class="sc">%in%</span> genes_to_label)</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="co">#label genes of interest</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>vp2_labeled <span class="ot">&lt;-</span> vp2 <span class="sc">+</span> </span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data  =</span> label_df, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj)), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size  =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> label_df, <span class="fu">aes</span>(<span class="at">label  =</span> rat_gene_symbol), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">box.padding =</span> <span class="fl">0.2</span>, <span class="at">point.padding =</span> <span class="fl">0.1</span>)</span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>vp2_labeled</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -1033,23 +1059,24 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621612, NA, 0.1273136, NA, NA, NA, NA, NA, 
 </section>
 <section id="volcano-plot-with-top-10-most-significant-genes-labeled-1" class="level4">
 <h4 class="anchored" data-anchor-id="volcano-plot-with-top-10-most-significant-genes-labeled-1">Volcano Plot with Top 10 Most Significant Genes Labeled</h4>
+<p>Finally, we will use some filtering to label our most significantly differentially regulated genes (top 10).</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">#filter top10 most significant genes</span></span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>resPDGFDF <span class="sc">|&gt;</span></span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="st">"gene"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(padj <span class="sc">&lt;</span> <span class="fl">0.05</span>) <span class="sc">|&gt;</span></span>
-<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_min</span>((<span class="at">order_by =</span> padj), <span class="at">n =</span> <span class="dv">10</span>) <span class="ot">-&gt;</span> top_genes_PDGF</span>
-<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="co">#label volcano plot</span></span>
-<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>vp2_top10 <span class="ot">&lt;-</span> vp2 <span class="sc">+</span> </span>
-<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data  =</span> top_genes_PDGF, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj)), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size  =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> top_genes_PDGF, <span class="fu">aes</span>(<span class="at">label  =</span> rat_gene_symbol), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">box.padding =</span> <span class="fl">0.2</span>, <span class="at">point.padding =</span> <span class="fl">0.1</span>)</span>
-<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
-<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a>vp2_top10</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co">#filter top10 most significant genes</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>resPDGFDF <span class="sc">|&gt;</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>(<span class="st">"gene"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(padj <span class="sc">&lt;</span> <span class="fl">0.05</span>) <span class="sc">|&gt;</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_min</span>((<span class="at">order_by =</span> padj), <span class="at">n =</span> <span class="dv">10</span>) <span class="ot">-&gt;</span> top_genes_PDGF</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="co">#label volcano plot</span></span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>vp2_top10 <span class="ot">&lt;-</span> vp2 <span class="sc">+</span> </span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data  =</span> top_genes_PDGF, <span class="fu">aes</span>(<span class="at">x =</span> log2FoldChange, <span class="at">y =</span> <span class="sc">-</span><span class="fu">log10</span>(padj)), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size  =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">data =</span> top_genes_PDGF, <span class="fu">aes</span>(<span class="at">label  =</span> rat_gene_symbol), <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">box.padding =</span> <span class="fl">0.2</span>, <span class="at">point.padding =</span> <span class="fl">0.1</span>)</span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a><span class="co">#view</span></span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a>vp2_top10</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -1063,32 +1090,138 @@ $ padj_IGF        &lt;dbl&gt; NA, 0.5621612, NA, 0.1273136, NA, NA, NA, NA, NA, 
 </section>
 <section id="save-volcano-plots-1" class="level4">
 <h4 class="anchored" data-anchor-id="save-volcano-plots-1">Save Volcano Plots</h4>
+<p>Here, we will save volcano plots created for the PDGF v. Control condition.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save</span></span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/volcanoplotPDGF.png"</span>, vp2)</span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/volcanoplotPDGFphenoswitchgenes.png"</span>, vp2_labeled)</span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/volcanoplotPDGFtop10.png"</span>, vp2_top10)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/volcanoplotPDGF.png"</span>, vp2)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/volcanoplotPDGFphenoswitchgenes.png"</span>, vp2_labeled)</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/volcanoplotPDGFtop10.png"</span>, vp2_top10)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 </section>
 <section id="linear-regression-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="linear-regression-analysis">Linear Regression Analysis</h3>
-<section id="assign-group-variable-to-merged-deseq-results-data-frame" class="level4">
-<h4 class="anchored" data-anchor-id="assign-group-variable-to-merged-deseq-results-data-frame">Assign Group Variable to Merged DESeq Results Data Frame</h4>
+<p>Linear regression analysis is a method that is used to analyze the relationship between two different variables. For my gene expression data, I would like to better understand if gene expression changes in VSMCs after IGF-1 treatment are correlated with gene expression changes in VSMCs after PDGF treatment.</p>
+<section id="assign-group-variable-to-merged-deseq2-results-data-frame" class="level4">
+<h4 class="anchored" data-anchor-id="assign-group-variable-to-merged-deseq2-results-data-frame">Assign Group Variable to Merged DESeq2 Results Data Frame</h4>
+<p>Here, we will assign a “group” variable based off of significance status for coloring on our later generated linear regression plot. This code was adapted from <em>Hayes et al.&nbsp;2022</em>.<sup>3</sup></p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">#makes PDGF Sig Column that states if each gene is significantly differentially regulated (YES) or not (NO) in the PDGF treated group</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>res_deseq_df <span class="ot">&lt;-</span> res_deseq_df</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(res_deseq_df))){</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (res_deseq_df<span class="sc">$</span>padj_PDGF[i]<span class="sc">&lt;</span><span class="fl">0.05</span> <span class="sc">&amp;</span> (<span class="sc">!</span><span class="fu">is.na</span>(res_deseq_df<span class="sc">$</span>padj_PDGF[i]))){</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>PDGFSig[i] <span class="ot">=</span> <span class="st">'YES'</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>PDGFSig[i] <span class="ot">=</span> <span class="st">'NO'</span></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a><span class="co">#makes IGF Sig Column that states if each gene is significantly differentially regulated (YES) or not (NO) in the PDGF treated group</span></span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(res_deseq_df))){</span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (res_deseq_df<span class="sc">$</span>padj_IGF[i]<span class="sc">&lt;</span><span class="fl">0.05</span> <span class="sc">&amp;</span> (<span class="sc">!</span><span class="fu">is.na</span>(res_deseq_df<span class="sc">$</span>padj_IGF[i]))){</span>
+<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>IGFSig[i] <span class="ot">=</span> <span class="st">'YES'</span></span>
+<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb44-17"><a href="#cb44-17" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
+<span id="cb44-18"><a href="#cb44-18" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>IGFSig[i] <span class="ot">=</span> <span class="st">'NO'</span></span>
+<span id="cb44-19"><a href="#cb44-19" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb44-20"><a href="#cb44-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb44-21"><a href="#cb44-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-22"><a href="#cb44-22" aria-hidden="true" tabindex="-1"></a><span class="co">#assigns groups based on significance status</span></span>
+<span id="cb44-23"><a href="#cb44-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(res_deseq_df))){</span>
+<span id="cb44-24"><a href="#cb44-24" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (res_deseq_df<span class="sc">$</span>PDGFSig[i] <span class="sc">==</span> <span class="st">'YES'</span> <span class="sc">&amp;</span> res_deseq_df<span class="sc">$</span>IGFSig[i] <span class="sc">==</span> <span class="st">'NO'</span>){</span>
+<span id="cb44-25"><a href="#cb44-25" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>Group[i] <span class="ot">=</span> <span class="dv">1</span>}</span>
+<span id="cb44-26"><a href="#cb44-26" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (res_deseq_df<span class="sc">$</span>PDGFSig[i] <span class="sc">==</span> <span class="st">'NO'</span> <span class="sc">&amp;</span> res_deseq_df<span class="sc">$</span>IGFSig[i] <span class="sc">==</span> <span class="st">'YES'</span>){</span>
+<span id="cb44-27"><a href="#cb44-27" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>Group[i] <span class="ot">=</span> <span class="dv">2</span>}</span>
+<span id="cb44-28"><a href="#cb44-28" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="cf">if</span> (res_deseq_df<span class="sc">$</span>PDGFSig[i] <span class="sc">==</span> <span class="st">'YES'</span> <span class="sc">&amp;</span> res_deseq_df<span class="sc">$</span>IGFSig[i] <span class="sc">==</span> <span class="st">'YES'</span>){</span>
+<span id="cb44-29"><a href="#cb44-29" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>Group[i] <span class="ot">=</span> <span class="dv">3</span>}</span>
+<span id="cb44-30"><a href="#cb44-30" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
+<span id="cb44-31"><a href="#cb44-31" aria-hidden="true" tabindex="-1"></a>    res_deseq_df<span class="sc">$</span>Group[i] <span class="ot">=</span> <span class="dv">4</span>}</span>
+<span id="cb44-32"><a href="#cb44-32" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb44-33"><a href="#cb44-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb44-34"><a href="#cb44-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-35"><a href="#cb44-35" aria-hidden="true" tabindex="-1"></a><span class="co">#view results </span></span>
+<span id="cb44-36"><a href="#cb44-36" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(res_deseq_df<span class="sc">$</span>Group)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    1     2     3     4 
+ 2720  1332  2450 24060 </code></pre>
+</div>
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co">#subsets all significant genes (IGF, PDGF, IGF &amp; PDGF) into a new object while leaving out non significant genes</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>res_deseq_df_final <span class="ot">&lt;-</span> <span class="fu">subset</span>(res_deseq_df, res_deseq_df<span class="sc">$</span>Group <span class="sc">!=</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
-<section id="section" class="level4">
-<h4 class="anchored" data-anchor-id="section"></h4>
+<section id="perform-linear-regression-and-plot" class="level4">
+<h4 class="anchored" data-anchor-id="perform-linear-regression-and-plot">Perform Linear Regression and Plot</h4>
+<p>Here, we will fit a model for linear regression on our significantly differentially expressed genes that were subset in the previous step. We will be comparing the log2fold change of gene expression between IGF-1 treated VSMCs and PDGF-treated VSMCs. Next, we will use ggplot2 to build a scatter plot that contains data points that are differentially colored based on their “Group” variable (which denotes significance status, see above). Fold change for the two different comparisons will be plotted on the x and y axis. Metrics extracted from the linear regression analysis that evaluate the fit of the model are also included.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co">#fit model for linear regression</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>fit1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(log2FC_IGF <span class="sc">~</span> log2FC_PDGF, <span class="at">data =</span> res_deseq_df_final)</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Build the plot directly from the full data frame</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(res_deseq_df_final, <span class="fu">aes</span>(<span class="at">x =</span> log2FC_PDGF, <span class="at">y =</span> log2FC_IGF, <span class="at">color =</span> <span class="fu">factor</span>(Group))) <span class="sc">+</span></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">slope =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">color =</span> <span class="st">"gray69"</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">se =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Linear Regression, IGF v. PDGF, All Significant Genes"</span>,</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"PDGF (Log2FC)"</span>,</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"IGF (Log2FC)"</span>,</span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="fu">paste</span>(</span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Slope ="</span>, <span class="fu">signif</span>(fit1<span class="sc">$</span>coef[[<span class="dv">2</span>]], <span class="dv">3</span>),</span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">"p ="</span>, <span class="fu">signif</span>(<span class="fu">summary</span>(fit1)<span class="sc">$</span>coef[<span class="dv">2</span>, <span class="dv">4</span>], <span class="dv">3</span>),</span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Adj R² ="</span>, <span class="fu">signif</span>(<span class="fu">summary</span>(fit1)<span class="sc">$</span>adj.r.squared, <span class="dv">3</span>),</span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Intercept ="</span>, <span class="fu">signif</span>(fit1<span class="sc">$</span>coef[[<span class="dv">1</span>]], <span class="dv">3</span>))) <span class="sc">+</span></span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>( <span class="at">name =</span> <span class="st">"Significant (padj &lt; 0.05)"</span>, <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"green"</span>, <span class="st">"black"</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"PDGF only"</span>, <span class="st">"IGF only"</span>, <span class="st">"PDGF &amp; IGF"</span>)) <span class="sc">+</span></span>
+<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">11</span>) <span class="sc">+</span></span>
+<span id="cb47-19"><a href="#cb47-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">11</span>) <span class="sc">+</span></span>
+<span id="cb47-20"><a href="#cb47-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cowplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Differential_Gene_Expression_Visualization_files/figure-html/Perform Linear Regression and Plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Figure 10:</strong> Plotted is the relationship between changes in gene expression (Log2FC) in IGF-1 treated VSMCs and PDGF-treated VSMCs. Data points are colored based on their significance status: blue depicts genes that were only significantly differentially expressed after PDGF treatment, green depicts genes that were only significantly differentially expressed after PDGF treatment, and black depicts genes that were significantly differentially expressed after both IGF and PDGF treatment. The regression line is depicted in grey (y = 0.481x + -0.0789, R<sup>2</sup> = 0.351). A solid black line (y = x) is plotted for reference.</p>
+</section>
+<section id="save-plot" class="level4">
+<h4 class="anchored" data-anchor-id="save-plot">Save Plot</h4>
+<p>Here, we will save an image of our scatterplot with linear regression data as a .png.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co">#save</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plots/linreg_igfpdgf_allsiggenes.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 </section>
+</section>
+<section id="the-end" class="level2">
+<h2 class="anchored" data-anchor-id="the-end">The End</h2>
+<p>Here, I have provided an example on how to visualize and better understand bulk RNA sequencing data using R.</p>
+<p><img src="images/clipboard-1813410545.png" class="img-fluid"></p>
+<p><strong>Figure 11:</strong> Satisfied VSMC. Created with BioRender.com.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <ol type="1">
 <li>Bickel MA, Sherry DM, Bullen EC, Vance ML, Jones KL, Howard EW, Conley SM. Microvascular smooth muscle cells exhibit divergent phenotypic switching responses to platelet-derived growth factor and insulin-like growth factor 1. Microvasc Res. 2024 Jan;151:104609. doi: 10.1016/j.mvr.2023.104609. Epub 2023 Sep 15. PMID: 37716411; PMCID: PMC10842624.</li>
 <li>Tang HY, Chen AQ, Zhang H, Gao XF, Kong XQ, Zhang JJ. Vascular Smooth Muscle Cells Phenotypic Switching in Cardiovascular Diseases. Cells. 2022 Dec 15;11(24):4060. doi: 10.3390/cells11244060. PMID: 36552822; PMCID: PMC9777337.</li>
+<li>Hayes LN, An K, Carloni E, Li F, Vincent E, Trippaers C, Paranjpe M, Dölen G, Goff LA, Ramos A, Kano SI, Sawa A. Prenatal immune stress blunts microglia reactivity, impairing neurocircuitry. Nature. 2022 Oct;610(7931):327-334. doi: 10.1038/s41586-022-05274-z. Epub 2022 Sep 28. PMID: 36171283.</li>
 </ol>
 </section>
 <section id="session-information" class="level2">
@@ -1117,51 +1250,44 @@ attached base packages:
 [8] base     
 
 other attached packages:
- [1] ensembldb_2.28.1            AnnotationFilter_1.28.0    
- [3] GenomicFeatures_1.56.0      ggrepel_0.9.6              
- [5] AnnotationHub_3.12.0        BiocFileCache_2.12.0       
- [7] dbplyr_2.3.4                AnnotationDbi_1.66.0       
- [9] DESeq2_1.44.0               SummarizedExperiment_1.34.0
-[11] Biobase_2.64.0              MatrixGenerics_1.16.0      
-[13] matrixStats_1.4.1           GenomicRanges_1.56.2       
-[15] GenomeInfoDb_1.40.1         IRanges_2.38.1             
-[17] S4Vectors_0.42.1            BiocGenerics_0.50.0        
-[19] cowplot_1.1.3               lubridate_1.9.4            
-[21] forcats_1.0.0               stringr_1.5.1              
-[23] dplyr_1.1.4                 purrr_1.0.2                
-[25] readr_2.1.5                 tidyr_1.3.1                
-[27] tibble_3.2.1                ggplot2_3.5.2              
-[29] tidyverse_2.0.0            
+ [1] rtracklayer_1.64.0          ggrepel_0.9.6              
+ [3] DESeq2_1.44.0               SummarizedExperiment_1.34.0
+ [5] Biobase_2.64.0              MatrixGenerics_1.16.0      
+ [7] matrixStats_1.4.1           GenomicRanges_1.56.2       
+ [9] GenomeInfoDb_1.40.1         IRanges_2.38.1             
+[11] S4Vectors_0.42.1            BiocGenerics_0.50.0        
+[13] cowplot_1.1.3               lubridate_1.9.4            
+[15] forcats_1.0.0               stringr_1.5.1              
+[17] dplyr_1.1.4                 purrr_1.0.2                
+[19] readr_2.1.5                 tidyr_1.3.1                
+[21] tibble_3.2.1                ggplot2_3.5.2              
+[23] tidyverse_2.0.0            
 
 loaded via a namespace (and not attached):
- [1] DBI_1.2.3                bitops_1.0-9             rlang_1.1.6             
- [4] magrittr_2.0.3           compiler_4.4.1           RSQLite_2.4.1           
- [7] systemfonts_1.2.3        png_0.1-8                vctrs_0.6.5             
-[10] ProtGenerics_1.36.0      pkgconfig_2.0.3          crayon_1.5.3            
-[13] fastmap_1.2.0            XVector_0.44.0           labeling_0.4.3          
-[16] utf8_1.2.6               Rsamtools_2.20.0         rmarkdown_2.29          
-[19] tzdb_0.5.0               UCSC.utils_1.0.0         ragg_1.4.0              
-[22] bit_4.6.0                xfun_0.52                zlibbioc_1.50.0         
-[25] cachem_1.1.0             jsonlite_1.8.9           blob_1.2.4              
-[28] DelayedArray_0.30.1      BiocParallel_1.38.0      parallel_4.4.1          
-[31] R6_2.6.1                 stringi_1.8.4            RColorBrewer_1.1-3      
-[34] rtracklayer_1.64.0       Rcpp_1.0.13              knitr_1.50              
-[37] Matrix_1.7-0             timechange_0.3.0         tidyselect_1.2.1        
-[40] rstudioapi_0.17.1        abind_1.4-8              yaml_2.3.10             
-[43] codetools_0.2-20         curl_5.2.3               lattice_0.22-6          
-[46] withr_3.0.2              KEGGREST_1.44.1          evaluate_1.0.4          
-[49] Biostrings_2.72.1        pillar_1.11.0            BiocManager_1.30.26     
-[52] filelock_1.0.3           generics_0.1.4           RCurl_1.98-1.16         
-[55] BiocVersion_3.19.1       hms_1.1.3                scales_1.4.0            
-[58] glue_1.8.0               lazyeval_0.2.2           tools_4.4.1             
-[61] BiocIO_1.14.0            GenomicAlignments_1.40.0 locfit_1.5-9.10         
-[64] XML_3.99-0.17            grid_4.4.1               colorspace_2.1-1        
-[67] GenomeInfoDbData_1.2.12  restfulr_0.0.15          cli_3.6.5               
-[70] rappdirs_0.3.3           textshaping_1.0.1        S4Arrays_1.4.1          
-[73] gtable_0.3.6             digest_0.6.37            SparseArray_1.4.8       
-[76] rjson_0.2.23             htmlwidgets_1.6.4        farver_2.1.2            
-[79] memoise_2.0.1            htmltools_0.5.8.1        lifecycle_1.0.4         
-[82] httr_1.4.7               mime_0.12                bit64_4.6.0-1           </code></pre>
+ [1] tidyselect_1.2.1         farver_2.1.2             Biostrings_2.72.1       
+ [4] bitops_1.0-9             fastmap_1.2.0            RCurl_1.98-1.16         
+ [7] GenomicAlignments_1.40.0 XML_3.99-0.17            digest_0.6.37           
+[10] timechange_0.3.0         lifecycle_1.0.4          magrittr_2.0.3          
+[13] compiler_4.4.1           rlang_1.1.6              tools_4.4.1             
+[16] utf8_1.2.6               yaml_2.3.10              knitr_1.50              
+[19] S4Arrays_1.4.1           labeling_0.4.3           htmlwidgets_1.6.4       
+[22] curl_5.2.3               DelayedArray_0.30.1      RColorBrewer_1.1-3      
+[25] abind_1.4-8              BiocParallel_1.38.0      withr_3.0.2             
+[28] grid_4.4.1               colorspace_2.1-1         scales_1.4.0            
+[31] cli_3.6.5                rmarkdown_2.29           crayon_1.5.3            
+[34] ragg_1.4.0               generics_0.1.4           rstudioapi_0.17.1       
+[37] httr_1.4.7               tzdb_0.5.0               rjson_0.2.23            
+[40] splines_4.4.1            zlibbioc_1.50.0          parallel_4.4.1          
+[43] XVector_0.44.0           restfulr_0.0.15          vctrs_0.6.5             
+[46] Matrix_1.7-0             jsonlite_1.8.9           hms_1.1.3               
+[49] systemfonts_1.2.3        locfit_1.5-9.10          glue_1.8.0              
+[52] codetools_0.2-20         stringi_1.8.4            gtable_0.3.6            
+[55] BiocIO_1.14.0            UCSC.utils_1.0.0         pillar_1.11.0           
+[58] htmltools_0.5.8.1        GenomeInfoDbData_1.2.12  R6_2.6.1                
+[61] textshaping_1.0.1        evaluate_1.0.4           lattice_0.22-6          
+[64] Rsamtools_2.20.0         Rcpp_1.0.13              nlme_3.1-164            
+[67] SparseArray_1.4.8        mgcv_1.9-1               xfun_0.52               
+[70] pkgconfig_2.0.3         </code></pre>
 </div>
 </div>
 
