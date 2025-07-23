@@ -1,0 +1,16 @@
+/* css styles */
+
+.about .about-image {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.about .about-image img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.about .about-image {
+  display: flex !important;
+  justify-content: center !important;
+}
