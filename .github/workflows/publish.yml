@@ -24,7 +24,6 @@ jobs:
         with:
           packages:
             any::knitr
-            any::rmarkdown
             any::tidyverse
             any::tidymodels
             any::cowplot
@@ -41,6 +40,7 @@ jobs:
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
+          path: .
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
