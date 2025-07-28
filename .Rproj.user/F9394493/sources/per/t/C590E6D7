@@ -1,0 +1,26 @@
+{
+    "id": "C590E6D7",
+    "path": "~/GitHub/michaelavance/.github/workflows/publish.yml",
+    "project_path": ".github/workflows/publish.yml",
+    "type": "yaml",
+    "hash": "3140701531",
+    "contents": "",
+    "dirty": false,
+    "created": 1753734680381.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "25,22",
+        "scrollLine": "12"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1753309323,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1753309323,
+    "read_only": false,
+    "read_only_alternatives": []
+}
